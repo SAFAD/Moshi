@@ -1,0 +1,26 @@
+/* Spinner.css */
+.spinner {
+	width: @spinner-image-width;
+	height: @spinner-image-height;
+	display: inline-block;
+	background-image: @spinner-dark-image;
+    	background-repeat: no-repeat;
+    	background-position: 0 0;
+}
+
+.spinner.light {
+	background-image: @spinner-light-image;
+}
+
+.spinner.large {
+	width: 100%;
+    background-image: @spinner-large-dark-image;
+}
+
+.spinner.large.light {
+    width: 100%;
+	background-image: @spinner-large-light-image;
+}
+.spinner.spinner-center {
+    background-position: center 0;
+}

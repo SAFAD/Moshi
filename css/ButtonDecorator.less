@@ -1,0 +1,66 @@
+/* ButtonDecorator.css */
+.button-decorator {
+	font-family: "Mochi Bold";
+	font-size: inherit;
+	color: #4b4b4b;
+	font-weight: bold;
+	display: inline-block;
+}
+.button-decorator-bookened {
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+    font-size:inherit;
+}
+.button > .button-decorator-left {
+	padding: 0px;
+    font-size: inherit;
+	/* Iffy method - prevents flickering in Chrome */
+	/*
+	-webkit-transition: padding 0.1s ease-in-out;
+	-moz-transition: padding 0.1s ease-in-out;
+	-o-transition: padding 0.1s ease-in-out;
+	-ms-transition: padding 0.1s ease-in-out;
+	transition: padding 0.1s ease-in-out;
+	*/
+
+	/* Preferred method */
+	-webkit-transition: -webkit-transform 0.1s ease-in-out;
+	-moz-transition: -moz-transform 0.1s ease-in-out;
+	-o-transition: -o-transform 0.1s ease-in-out;
+	-ms-transition: -ms-transform 0.1s ease-in-out;
+	transition: transform 0.1s ease-in-out;
+}
+.button:active:hover:not([disabled]) > .button-decorator-left {
+	-webkit-transform: translateX(-4px);
+	-moz-transform: translateX(-4px);
+	-o-transform: translateX(-4px);
+	-ms-transform: translateX(-4px);
+	transform: translateX(-4px);
+}
+.button > .button-decorator-right {
+	padding: 0px;
+    font-size: inherit;
+	/* Iffy method - prevents flickering in Chrome */
+	/*
+	-webkit-transition: padding 0.1s ease-in-out;
+	-moz-transition: padding 0.1s ease-in-out;
+	-o-transition: padding 0.1s ease-in-out;
+	-ms-transition: padding 0.1s ease-in-out;
+	transition: padding 0.1s ease-in-out;
+	*/
+
+	/* Preferred method */
+	-webkit-transition: -webkit-transform 0.1s ease-in-out;
+	-moz-transition: -moz-transform 0.1s ease-in-out;
+	-o-transition: -o-transform 0.1s ease-in-out;
+	-ms-transition: -ms-transform 0.1s ease-in-out;
+	transition: transform 0.1s ease-in-out;
+}
+.button:active:hover:not([disabled]) > .button-decorator-right {
+	-webkit-transform: translateX(4px);
+	-moz-transform: translateX(4px);
+	-o-transform: translateX(4px);
+	-ms-transform: translateX(4px);
+	transform: translateX(4px);
+}
