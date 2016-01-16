@@ -1,0 +1,1221 @@
+/* Mochi default parameters defined here */
+/* Fonts */
+/* ---------------------------------------*/
+/* Text Colors */
+/* ---------------------------------------*/
+/* Background Colors */
+/* ---------------------------------------*/
+/* Disabled Opacity */
+/* ---------------------------------------*/
+/* Spinner */
+/* ---------------------------------------*/
+/* Mochi rules defined here */
+/* classes.less - combined CSS (less) files for all released mochi controls
+   into single mochi.less file to avoid IE bug that allows
+   a maximum of 31 style sheets to be loaded before silently failing */
+/* Import font styles */
+/* due to licensing, we have the open-source Lato as a fallback when Prelude is
+   not available. However,  */
+@font-face {
+  font-family: "Mochi Light";
+  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-Light.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-Light.ttf") format("truetype"), url("../fonts/lato-light.woff") format("woff"), url("../fonts/lato-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mochi Medium";
+  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-Medium.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-Medium.ttf") format("truetype"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mochi Medium";
+  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-MediumItalic.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-MediumItalic.ttf") format("truetype"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Mochi Bold Italic";
+  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-BoldItalic.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-BoldItalic.ttf") format("truetype"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mochi Condensed Med";
+  src: local("☺"), url("../fonts/PreludeCondensed-Medium.woff") format("woff"), url("../fonts/PreludeCondensed-Medium.ttf") format("truetype"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mochi Med Oblique";
+  src: local("☺"), url("../fonts/Prelude-MediumOblique.woff") format("woff"), url("../fonts/Prelude-MediumOblique.ttf") format("truetype"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Mochi Bold";
+  src: local("☺"), url("../fonts/Prelude-Bold.woff") format("woff"), url("../fonts/Prelude-bold.ttf") format("truetype"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mochi Bold Oblique";
+  src: local("☺"), url("../fonts/Prelude-BoldOblique.woff") format("woff"), url("../fonts/Prelude-boldOblique.ttf") format("truetype"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: oblique;
+}
+/* Prevent browser's default focus treatment (at least in Chrome) */
+:focus {
+  outline: none;
+}
+.mochi {
+  color: #333333;
+  font-family: "Mochi Bold Oblique";
+  font-size: 20px;
+  cursor: default;
+  background-color: #F5F5F5;
+  box-shadow: inset 0 0 169px rgba(0, 0, 0, 0.3);
+  /* remove automatic tap highlight color */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* prevent IE from inheriting line-height for these elements */
+.mochi button,
+.mochi label,
+.mochi input {
+  line-height: normal;
+}
+.selected {
+  background-color: #C4E3FE;
+}
+/* style that removes transition effects from elements */
+.no-animate {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.item {
+  font-family: "Mochi Med Oblique";
+  font-size: 14px;
+  color: #323232;
+  font-style: oblique;
+}
+.toolbar-inline > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 6px 5px;
+  box-sizing: border-box;
+}
+/* LESS pre-calculations */
+/* Individual Widget CSS */
+/* Badge.css */
+.badge {
+  padding: 8px 0 8px 0;
+  min-width: 40px;
+  width: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.badge-inner {
+  font-family: "Mochi Bold Italic";
+  font-size: 12pt;
+  height: 24px;
+  line-height: 24px;
+  min-width: 24px;
+  width: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.badge-inner.oval {
+  -webkit-border-radius: 12px;
+  /* Safari, Chrome */
+  -moz-border-radius: 12px;
+  /* Firefox */
+  border-radius: 12px;
+  /* CSS3 */
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.badge-inner.round {
+  -webkit-border-radius: 12px;
+  /* Safari, Chrome */
+  -moz-border-radius: 12px;
+  /* Firefox */
+  border-radius: 12px;
+  /* CSS3 */
+  padding: 0px;
+}
+/* Button.css */
+.button {
+  position: relative;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.button:focus {
+  outline: none;
+}
+.button::-moz-focus-inner {
+  border: 0px;
+}
+.button-bar {
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  height: 1px;
+  width: 0px;
+  background-color: #69cdff;
+}
+.button > .button-bar {
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.button:active:hover:not([disabled]) > .button-bar {
+  background-color: #69cdff;
+}
+.button.active > .button-bar {
+  background-color: #69cdff;
+}
+.button.disabled {
+  opacity: 0.4;
+}
+.button-warning > .button-base {
+  color: #ff4a4a;
+}
+.button:active:hover:not([disabled]).button-warning > .button-bar {
+  background-color: #ff4a4a;
+}
+.button.active.button-warning > .button-bar {
+  background-color: #ff4a4a;
+}
+.button > .button-base {
+  margin: 3px;
+  margin-right: 5px;
+  padding: 0px;
+  line-height: inherit;
+  font-size: 70%;
+}
+.view-select-button > .button-base {
+  height: 34px;
+  line-height: 34px;
+  vertical-align: middle;
+  font-size: inherit;
+}
+.button-base {
+  display: inline-block;
+  font-family: "Mochi Bold Oblique";
+  font-size: inherit;
+  color: #323232;
+  font-style: oblique;
+  font-weight: bold;
+  border-width: 0px;
+  background-color: transparent;
+  letter-spacing: normal;
+  margin: 2px;
+  padding: 1px 0px;
+  white-space: nowrap;
+  height: initial;
+  -webkit-transition: letter-spacing 0.1s ease-in-out;
+  -moz-transition: letter-spacing 0.1s ease-in-out;
+  -o-transition: letter-spacing 0.1s ease-in-out;
+  -ms-transition: letter-spacing 0.1s ease-in-out;
+  transition: letter-spacing 0.1s ease-in-out;
+}
+/* ButtonColors.css */
+.button-affirmative > .button-base,
+.button-affirmative > .button-decorator {
+  color: #00dd11;
+}
+.button:active:hover:not([disabled]).button-affirmative > .button-bar {
+  color: #00dd11;
+}
+.button.active.button-affirmative > .button-bar {
+  color: #00dd11;
+}
+.button-blue > .button-base,
+.button-blue > .button-decorator {
+  color: #35A8EE;
+}
+.button:active:hover:not([disabled]).button-blue > .button-bar {
+  color: #35A8EE;
+}
+.button.active.button-blue > .button-bar {
+  color: #35A8EE;
+}
+/* ButtonDecorator.css */
+.button-decorator {
+  font-family: "Mochi Bold";
+  font-size: inherit;
+  color: #4b4b4b;
+  font-weight: bold;
+  display: inline-block;
+}
+.button-decorator-bookened {
+  vertical-align: top;
+  margin: 0px;
+  padding: 0px;
+  font-size: inherit;
+}
+.button > .button-decorator-left {
+  padding: 0px;
+  font-size: inherit;
+  /* Iffy method - prevents flickering in Chrome */
+  /*
+	-webkit-transition: padding 0.1s ease-in-out;
+	-moz-transition: padding 0.1s ease-in-out;
+	-o-transition: padding 0.1s ease-in-out;
+	-ms-transition: padding 0.1s ease-in-out;
+	transition: padding 0.1s ease-in-out;
+	*/
+  /* Preferred method */
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  -moz-transition: -moz-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
+  -ms-transition: -ms-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+}
+.button:active:hover:not([disabled]) > .button-decorator-left {
+  -webkit-transform: translateX(-4px);
+  -moz-transform: translateX(-4px);
+  -o-transform: translateX(-4px);
+  -ms-transform: translateX(-4px);
+  transform: translateX(-4px);
+}
+.button > .button-decorator-right {
+  padding: 0px;
+  font-size: inherit;
+  /* Iffy method - prevents flickering in Chrome */
+  /*
+	-webkit-transition: padding 0.1s ease-in-out;
+	-moz-transition: padding 0.1s ease-in-out;
+	-o-transition: padding 0.1s ease-in-out;
+	-ms-transition: padding 0.1s ease-in-out;
+	transition: padding 0.1s ease-in-out;
+	*/
+  /* Preferred method */
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  -moz-transition: -moz-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
+  -ms-transition: -ms-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+}
+.button:active:hover:not([disabled]) > .button-decorator-right {
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
+  -o-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  transform: translateX(4px);
+}
+/* Icon.css & IconButton.css */
+.icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: 0 0px;
+}
+.icon-button-item {
+  display: inline-block;
+  margin: 2px;
+  padding: 1px 0px;
+  width: 34px;
+  height: 34px;
+  border-width: 0px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.icon-button-item:active:hover:not([disabled]) > .icon {
+  background-position: 0 -24px;
+}
+.icon-button-item.disabled {
+  opacity: 0.4;
+}
+.icon-button {
+  position: relative;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+}
+.icon-button > .button-bar {
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.icon-button:active:hover:not([disabled]) > .button-bar {
+  background-color: #69cdff;
+}
+.icon-button.active > .button-bar {
+  background-color: #69cdff;
+}
+.icon-button.disabled {
+  opacity: 0.4;
+}
+.icon-button-bar {
+  top: 38px;
+}
+/* ViewSelector */
+.view-select-button {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+.view-select-button > .button-base:active:hover:not([disabled]) {
+  letter-spacing: 2px;
+}
+.view-select-button > .button-base[disabled] {
+  opacity: 0.4;
+}
+/* RadioButton.css */
+.radio-button {
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  margin: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 13px;
+  border: 2px solid #646464;
+}
+.radio-button-animate {
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+.radio-button.disabled {
+  border-color: #a2a2a2;
+}
+/* Checkbox.css */
+.checkbox {
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  margin: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 13px;
+  border: 2px solid #646464;
+}
+.checkbox[checked] {
+  background: url(../images/checkbox.png) no-repeat;
+  padding: 2px;
+  border-width: 0px;
+}
+.checkbox-animate {
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+.checkbox.disabled {
+  opacity: 0.4;
+}
+/* Input.css */
+.input-decorator > input {
+  /* reset */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  /* FIXME: hack for styling reset on Android */
+  /* -webkit-appearance: caret;*/
+  font-size: 14px;
+  font-family: "Mochi Medium";
+  color: #4b4b4b;
+  font-style: italic;
+}
+.input-decorator.focused > input {
+  cursor: text;
+}
+.input-decorator.disabled > input {
+  cursor: default;
+}
+.input-decorator > input::-webkit-input-placeholder {
+  color: #7d7d7d;
+}
+.input-decorator > input:-moz-placeholder {
+  color: #7d7d7d;
+}
+/* IE10 */
+.input-decorator > input:-ms-input-placeholder {
+  color: #7d7d7d;
+}
+.input-animate {
+  -webkit-transition: border-color 0.1s linear;
+  -moz-transition: border-color 0.1s linear;
+  -o-transition: border-color 0.1s linear;
+  transition: border-color 0.1s linear;
+}
+/* InputDecorator.css */
+.input-decorator {
+  padding: 1px 8px 5px 8px;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #a2a2a2;
+  background-color: white;
+  margin: 0;
+  height: inherit;
+}
+.input-decorator.focused {
+  border-color: #69cdff;
+}
+.input-decorator.disabled {
+  /* FIXME: needed to color a disabled input placeholder. */
+  /*-webkit-text-fill-color: #888;*/
+  opacity: 0.4;
+}
+/* RichText.css */
+.input-decorator > .richtext {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  /* FIXME: hack for styling reset on Android */
+  /* -webkit-appearance: caret;*/
+  font-size: 14px;
+  font-family: "Mochi Medium";
+  color: #4b4b4b;
+  font-style: italic;
+}
+.input-decorator.focused > .richtext {
+  cursor: text;
+}
+.input-decorator.disabled > .richtext {
+  cursor: default;
+}
+/* Pasting rich text adds <p> tag with a margin-top value of 16px */
+.richtext > p {
+  margin-top: 0px;
+}
+/* ProgressBar.css */
+.progress-bar {
+  height: 1px;
+  min-width: 128px;
+  background-color: #a2a2a2;
+}
+.progress-bar-bar {
+  height: 100%;
+  background-color: #69cdff;
+}
+/* ProgressText.css */
+.progress-text {
+  margin: 24px 16px 0px;
+  font-size: 12px;
+  color: #a2a2a2;
+  font-family: "Mochi Med Oblique";
+  font-style: oblique;
+}
+.progress-text-box {
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+}
+.progress-text-underwear {
+  position: absolute;
+  display: inline-block;
+  color: #a2a2a2;
+  line-height: 12px;
+}
+.progress-text-outerwear {
+  position: absolute;
+  display: inline-block;
+  color: #69cdff;
+  line-height: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* Slider.css */
+.slider {
+  position: relative;
+  margin: 10px 20px;
+}
+.slider-taparea {
+  position: absolute;
+  top: -16px;
+  height: 32px;
+  width: 100%;
+}
+.slider-knob {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  margin: -8px -9px;
+  background-color: #69cdff;
+}
+.slider-knob.active,
+.slider-knob:active:hover {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  margin: -18px -20px;
+}
+.slider-popup {
+  position: absolute;
+  display: block;
+  z-index: 20;
+  left: 0px;
+  top: 0px;
+  width: 62px;
+  height: 37px;
+  padding-left: 4px;
+}
+.slider-popup-label {
+  position: absolute;
+  top: 1px;
+  width: 60px;
+  height: 32px;
+  white-space: nowrap;
+  font-family: "Mochi Medium";
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.slider-popup.above {
+  top: -56px;
+}
+/* below is commented out pending HI approval */
+/*
+.slider-popup.below {
+	top: 25px;
+}
+*/
+/* Spinner.css */
+.spinner {
+  width: 52px;
+  height: 52px;
+  display: inline-block;
+  background-image: url(../images/spinner-dark.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.spinner.light {
+  background-image: url(../images/spinner-light.gif);
+}
+.spinner.large {
+  width: 100%;
+  background-image: url(../images/spinner-large-dark.gif);
+}
+.spinner.large.light {
+  width: 100%;
+  background-image: url(../images/spinner-large-light.gif);
+}
+.spinner.spinner-center {
+  background-position: center 0;
+}
+/* TextArea.css */
+.input-decorator > textarea {
+  margin: 10px 0px 6px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  /* Remove scrollbars and resize handle */
+  resize: none;
+  overflow: auto;
+  /* FIXME: hack for styling reset on Android */
+  /* -webkit-appearance: caret;*/
+  font-size: 14px;
+  font-family: "Mochi Medium";
+  color: #4b4b4b;
+  font-style: italic;
+}
+.input-decorator.focused > textarea {
+  cursor: text;
+}
+.input-decorator.disabled > textarea {
+  cursor: default;
+}
+.textarea {
+  /* need >=50px for scrollbar to be usable on mac */
+  min-height: 50px;
+}
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+textarea::-webkit-scrollbar-track-piece {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+}
+textarea::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: #7d7d7d;
+  -webkit-border-radius: 10px;
+}
+/* ToggleButton.css */
+.toggle-button {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  min-width: 48px;
+  vertical-align: middle;
+  border-radius: 12px;
+  background-size: auto 100%;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.toggle-button-knob {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border-radius: 10px;
+  background-color: white;
+  left: 0px;
+  overflow: hidden;
+}
+.toggle-button.disabled {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.toggle-animate {
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+/* Header.css */
+.header {
+  height: 64px;
+  padding: 0px 32px;
+  white-space: nowrap;
+}
+.header-content {
+  font-family: "Mochi Light";
+  font-size: 36px;
+  line-height: 32px;
+  color: #4b4b4b;
+  padding-top: 30px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.header-controls {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-top: 2px;
+}
+.header-controls-first {
+  padding-left: 56px;
+}
+.header-controls > * {
+  display: inline-block;
+  white-space: nowrap;
+}
+/* Subheader.css */
+.subheader {
+  height: 56px;
+  padding: 0px 32px;
+  white-space: nowrap;
+}
+.subheader-content {
+  font-family: "Mochi Medium";
+  font-size: 18px;
+  font-style: italic;
+  color: #323232;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /* 56px height */
+  line-height: 26px;
+  padding-top: 30px;
+}
+/* Collapsable.css */
+.collapsable-header {
+  font-family: "Mochi Medium";
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  color: #323232;
+  padding: 0 32px 0 32px;
+}
+.collapsable-item {
+  font-family: "Mochi Medium";
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: #4b4b4b;
+  padding: 0 0 48px 32px;
+}
+.collapsable-footer {
+  height: 16px;
+  border-top: 0px transparent;
+  border-bottom: 1px solid #CCCCCC;
+  border-radius: 32px;
+  background-color: #F5F5F5;
+}
+.contextual-popup-title {
+  font-weight: bold;
+  padding: 24px 32px 0px;
+}
+.contextual-popup-scroller {
+  padding: 24px 32px;
+}
+.contextual-popup-action-buttons {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.contextual-popup,
+.mochi.contextual-popup {
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.44);
+  border: 2px solid #646464;
+  border-radius: 24px;
+  padding: 6px;
+  color: #4b4b4b;
+  background-color: #ffffff;
+  min-width: 150px;
+  margin-top: 2px;
+}
+/*setup the nub*/
+.contextual-popup::after {
+  content: '';
+  position: absolute;
+}
+/*for popups above activator*/
+.contextual-popup.vertical.above {
+  top: auto;
+  margin-top: -10px;
+  bottom: 100%;
+  margin-bottom: 10px;
+}
+/*for popups below activator*/
+.contextual-popup.vertical.below {
+  margin-top: 20px;
+}
+/*for popups on the left of the activator*/
+.contextual-popup.right.horizontal {
+  margin-left: -11px;
+}
+/*for popups on the right of the activator*/
+.contextual-popup.left.horizontal {
+  margin-left: 10px;
+}
+/****nub positioning for vertical popups****/
+/*horizontally centered nub*/
+.contextual-popup.vertical::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 34%;
+  width: 71px;
+  height: 20px;
+  background: transparent url(../images/contextual-popup-nubs/up.png) no-repeat;
+}
+/*nub near horizontal left*/
+.contextual-popup.vertical.right::after {
+  left: 0%;
+  margin-left: 20px;
+}
+/*nub near horizontal right*/
+.contextual-popup.vertical.left::after {
+  left: 100%;
+  margin-left: -90px;
+}
+/*downward facing nub*/
+.contextual-popup.vertical.above::after {
+  top: 100%;
+  width: 71px;
+  height: 20px;
+  background: transparent url(../images/contextual-popup-nubs/down.png) no-repeat;
+}
+.contextual-popup.vertical.below.right::after {
+  top: 0%;
+  margin-top: -20px;
+  width: 71px;
+  height: 20px;
+  background: transparent url(../images/contextual-popup-nubs/up.png) no-repeat;
+}
+.contextual-popup.vertical.below.left::after {
+  top: 0%;
+  margin-top: -20px;
+  width: 71px;
+  height: 20px;
+  background: transparent url(../images/contextual-popup-nubs/up.png) no-repeat;
+}
+/****nub positioning for left/right popups****/
+/*vertically centered nub for popups on left of activator*/
+.contextual-popup.right::after {
+  left: 100%;
+  top: 35%;
+  width: 20px;
+  height: 71px;
+  background: transparent url(../images/contextual-popup-nubs/right.png) no-repeat;
+}
+/*nub near vertical top for popups on left of activator*/
+.contextual-popup.right.high::after {
+  top: 25px;
+}
+/*nub near vertical bottom for popups on left of activator*/
+.contextual-popup.right.low::after {
+  top: 100%;
+  margin-top: -100px;
+}
+/*vertically centered nub for popups on right of activator*/
+.contextual-popup.left::after {
+  left: 0%;
+  width: 20px;
+  height: 71px;
+  margin-left: -20px;
+  top: 35%;
+  background: transparent url(../images/contextual-popup-nubs/left.png) no-repeat;
+}
+/*nub near vertical top for popups on right of activator*/
+.contextual-popup.left.high::after {
+  top: 25px;
+}
+/*nub near vertical bottom for popups on right of activator*/
+.contextual-popup.left.low::after {
+  top: 100%;
+  margin-top: -100px;
+}
+/*********************corners********************/
+/*vertical top corners*/
+/*for popups on the left of the activator*/
+.contextual-popup.vertical.right.corner {
+  margin-left: 0px;
+}
+/*for popups on the right of the activator*/
+.contextual-popup.vertical.left.corner {
+  margin-left: 0px;
+}
+.contextual-popup.vertical.below.left.corner {
+  border-top-right-radius: 0px;
+}
+.contextual-popup.vertical.below.right.corner {
+  border-top-left-radius: 0px;
+}
+.contextual-popup.vertical.below.left.corner::after {
+  top: 0%;
+  left: 100%;
+  margin-top: -14px;
+  margin-left: -30px;
+  width: 71px;
+  height: 20px;
+  background: transparent url(../images/contextual-popup-nubs/top-right-corner-up.png) no-repeat;
+}
+.contextual-popup.vertical.below.right.corner::after {
+  top: 0%;
+  left: 0%;
+  width: 71px;
+  height: 20px;
+  margin-left: -2px;
+  margin-top: -14px;
+  background: transparent url(../images/contextual-popup-nubs/top-left-corner-up.png) no-repeat;
+}
+/*vertical bottom corners*/
+.contextual-popup.left.above.corner {
+  border-bottom-right-radius: 0px;
+}
+.contextual-popup.right.above.corner {
+  border-bottom-left-radius: 0px;
+}
+.contextual-popup.vertical.left.above.corner::after {
+  top: 100%;
+  margin-left: -30px;
+  width: 71px;
+  height: 20px;
+  background: transparent url(../images/contextual-popup-nubs/bottom-right-corner-down.png) no-repeat;
+}
+.contextual-popup.vertical.right.above.corner::after {
+  top: 100%;
+  left: 0%;
+  margin-left: -2px;
+  background: transparent url(../images/contextual-popup-nubs/bottom-left-corner-down.png) no-repeat;
+}
+/*horizontal bottom corners*/
+.contextual-popup.left.low.corner {
+  border-bottom-left-radius: 0px;
+}
+.contextual-popup.right.low.corner {
+  border-bottom-right-radius: 0px;
+}
+.contextual-popup.left.low.corner::after {
+  top: 100%;
+  left: 0%;
+  margin-top: -30px;
+  margin-left: -14px;
+  background: transparent url(../images/contextual-popup-nubs/bottom-left-corner-left.png) no-repeat;
+}
+.contextual-popup.right.low.corner::after {
+  top: 100%;
+  left: 100%;
+  margin-top: -30px;
+  background: transparent url(../images/contextual-popup-nubs/bottom-right-corner-right.png) no-repeat;
+}
+/*horizontal top corners*/
+.contextual-popup.left.high.corner {
+  border-top-left-radius: 0px;
+}
+.contextual-popup.right.high.corner {
+  border-top-right-radius: 0px;
+}
+.contextual-popup.left.high.corner::after {
+  top: 0%;
+  left: 0%;
+  margin-top: -2px;
+  margin-left: -14px;
+  background: transparent url(../images/contextual-popup-nubs/top-left-corner-left.png) no-repeat;
+}
+.contextual-popup.right.high.corner::after {
+  top: 0%;
+  left: 100%;
+  margin-top: -2px;
+  background: transparent url(../images/contextual-popup-nubs/top-right-corner-right.png) no-repeat;
+}
+/* ContextualPopupDecorator.css */
+.contextual-popup-decorator {
+  position: relative;
+}
+/* List.css */
+.list-scroll-fade {
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  height: 4px;
+  width: 100%;
+}
+.list-scroll-fade.top {
+  top: 0;
+}
+.list-scroll-fade.bottom {
+  bottom: 0;
+}
+.list-scroll-fade-row {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+}
+.list-scroll-fade-row.row-1 {
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #c5c5c5), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
+  width: 100%;
+}
+.list-scroll-fade-row.row-2 {
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #d5d5d5), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
+  width: 95%;
+}
+.list-scroll-fade-row.row-3 {
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #e5e5e5), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
+  width: 85%;
+}
+.list-scroll-fade-row.row-4 {
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #f5f5f5), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  width: 65%;
+}
+/* ListHeader.css */
+.list-header {
+  font-family: "Mochi Medium";
+  font-size: 18pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #323232;
+  padding: 0 32px 0 32px;
+}
+/* ListHeader.css */
+.list-header {
+  font-family: "Mochi Medium";
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  color: #323232;
+  padding: 0 32px 0 32px;
+}
+/* ListItem.css */
+.list-item {
+  font-family: "Mochi Medium";
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: #4b4b4b;
+  padding: 0 0 48px 32px;
+}
+.highlight {
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #f5f5f5), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
+}
+.highlight-border {
+  position: absolute;
+  height: 4px;
+  margin: 0 112px;
+  line-height: 4px;
+}
+.highlight-border:before,
+.highlight-border:after {
+  content: ' ';
+  width: 112px;
+  height: 4px;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.highlight-border.top {
+  background: url(../images/list/SmallSelectedItem/SmallSelectedListItem_TopMiddle.png) repeat-x;
+}
+.highlight-border.top:before {
+  left: -112px;
+  background-image: url(../images/list/SmallSelectedItem/SmallSelectedListItem_TopLeftFade.png);
+}
+.highlight-border.top:after {
+  right: -112px;
+  background-image: url(../images/list/SmallSelectedItem/SmallSelectedListItem_TopRightFade.png);
+}
+.highlight-border.bottom {
+  background: url(../images/list/SmallSelectedItem/SmallSelectedListItem_BottomMiddle.png) repeat-x;
+}
+.highlight-border.bottom:before {
+  left: -112px;
+  background-image: url(../images/list/SmallSelectedItem/SmallSelectedListItem_BottomLeftFade.png);
+}
+.highlight-border.bottom:after {
+  right: -112px;
+  background-image: url(../images/list/SmallSelectedItem/SmallSelectedListItem_BottomRightFade.png);
+}
+/* wide lists, ie width >= 640px */
+.highlight-border.large {
+  position: absolute;
+  height: 4px;
+  margin: 0 320px;
+  line-height: 4px;
+}
+.highlight-border.large:before,
+.highlight-border.large:after {
+  content: ' ';
+  width: 320px;
+  height: 4px;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.highlight-border.large.top {
+  background: url(../images/list/LargeSelectedItem/LargeSelectedListItem_TopMiddle.png) repeat-x;
+}
+.highlight-border.top.large:before {
+  left: -320px;
+  background-image: url(../images/list/LargeSelectedItem/LargeSelectedListItem_TopLeftFade.png);
+}
+.highlight-border.top.large:after {
+  right: -320px;
+  background-image: url(../images/list/LargeSelectedItem/LargeSelectedListItem_TopRightFade.png);
+}
+.highlight-border.bottom.large {
+  background: url(../images/list/LargeSelectedItem/LargeSelectedListItem_BottomMiddle.png) repeat-x;
+}
+.highlight-border.bottom.large:before {
+  left: -320px;
+  background-image: url(../images/list/LargeSelectedItem/LargeSelectedListItem_BottomLeftFade.png);
+}
+.highlight-border.bottom.large:after {
+  right: -320px;
+  background-image: url(../images/list/LargeSelectedItem/LargeSelectedListItem_BottomRightFade.png);
+}
+/* Panels.css */
+.panels > * {
+  /* 320px width, plus the 45px overlap */
+  /* May need to modify this */
+  width: 365px;
+  padding-right: 45px;
+  background-color: #f5f5f5;
+  /* box-shadow: inset 0 0 169px rgba(0, 0, 0, 0.3); */
+  border-left: 1px solid #ccc;
+  border-top-left-radius: 45px;
+}
+.base-panel > *:first-child {
+  border-top-left-radius: 0px;
+  padding-right: 0px;
+}
+/*
+	Put anything you reference with "url()" in ../assets/
+	This way, you can minify your application, and just remove the "source" folder for production
+*/
+.gridlist {
+  background: #ccc;
+  font-family: "Mochi Light";
+}
+.gridlist-imageitem {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.gridlist-imageitem.selected {
+  background: orange;
+  padding: 3px;
+  /*Offset the right and bottom padding by adding negative top and left margin*/
+  margin-left: -3px;
+  margin-top: -3px;
+}
+.gridlist-imageitem img {
+  width: 100%;
+  height: 100%;
+}
+.gridlist-imageitem .caption {
+  font-family: "Mochi Light";
+  font-weight: bold;
+  text-align: center;
+  font-size: 10pt;
+  text-transform: uppercase;
+  z-index: 10;
+  padding-top: 10px;
+  color: #555;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 30px;
+  overflow: hidden;
+  bottom: 30px;
+  position: relative;
+  color: #fff;
+}
