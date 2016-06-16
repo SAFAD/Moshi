@@ -1,5 +1,5 @@
 /* RadioButton.css */
-.radio-button  {
+input[type="radio"]  {
 	cursor: pointer;
 	height: 22px;
 	width: 22px;
@@ -8,13 +8,12 @@
 	vertical-align: middle;
 	border-radius: 13px;
 	border: 2px solid #646464;
-}
-.radio-button-animate {
 	-webkit-transition: background-color 0.1s linear;
 	-moz-transition: background-color 0.1s linear;
 	-o-transition: background-color 0.1s linear;
 	transition: background-color 0.1s linear;
 }
-.radio-button.disabled {
+
+input[type="radio"]:disabled {
 	border-color: #a2a2a2;
 }
