@@ -145,7 +145,7 @@
   padding: 0px;
 }
 /* Button.css */
-.button {
+button {
   position: relative;
   border-width: 0px;
   margin: 0px;
@@ -155,10 +155,10 @@
   font-size: 1.5rem;
   line-height: 1.5rem;
 }
-.button:focus {
+button:focus {
   outline: none;
 }
-.button::-moz-focus-inner {
+button::-moz-focus-inner {
   border: 0px;
 }
 .button-bar {
@@ -169,7 +169,7 @@
   width: 0px;
   background-color: #69cdff;
 }
-.button > .button-bar {
+button > .button-bar {
   background-color: transparent;
   -webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
@@ -177,25 +177,25 @@
   -ms-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
-.button:active:hover:not([disabled]) > .button-bar {
+button:active:hover:not([disabled]) > .button-bar {
   background-color: #69cdff;
 }
-.button.active > .button-bar {
+button.active > .button-bar {
   background-color: #69cdff;
 }
-.button.disabled {
+button.disabled {
   opacity: 0.4;
 }
-.button-warning > .button-base {
+.warning > .button-base {
   color: #ff4a4a;
 }
-.button:active:hover:not([disabled]).button-warning > .button-bar {
+button:active:hover:not([disabled]).warning > .button-bar {
   background-color: #ff4a4a;
 }
-.button.active.button-warning > .button-bar {
+button.active.warning > .button-bar {
   background-color: #ff4a4a;
 }
-.button > .button-base {
+button > .button-base {
   margin: 3px;
   margin-right: 5px;
   padding: 0px;
