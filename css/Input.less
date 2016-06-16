@@ -1,39 +1,42 @@
 /* Input.css */
-.input-decorator > input {
+input {
 	/* reset */
 	margin: 0px;
-	padding: 0px;
-	border: none;
+	padding: 1px 8px 5px 8px;
+	border-radius: 16px;
+	border: 1px solid;
+	border-color: #a2a2a2;
 	outline: none;
 	cursor: pointer;
-	background-color: transparent;
+	background-color: white;
 	box-shadow: none;
+	height: inherit;
 	/* FIXME: hack for styling reset on Android */
 	/* -webkit-appearance: caret;*/
 	font-size: 14px;
 	font-family: "Mochi Medium";
 	color: #4b4b4b;
 	font-style: italic;
-}
-.input-decorator.focused > input {
-	cursor: text;
-}
-.input-decorator.disabled > input {
-	cursor: default;
-}
-.input-decorator > input::-webkit-input-placeholder {
-	color: #7d7d7d;
-}
-.input-decorator > input:-moz-placeholder {
-	color: #7d7d7d;
-}
-/* IE10 */
-.input-decorator > input:-ms-input-placeholder {
-	color: #7d7d7d;
-}
-.input-animate {
 	-webkit-transition: border-color 0.1s linear;
 	-moz-transition: border-color 0.1s linear;
 	-o-transition: border-color 0.1s linear;
 	transition: border-color 0.1s linear;
+}
+input:focus {
+	cursor: text;
+	border-color: #69cdff;
+}
+input:disabled {
+	cursor: default;
+	opacity: 0.4;
+}
+input::-webkit-input-placeholder {
+	color: #7d7d7d;
+}
+input:-moz-placeholder {
+	color: #7d7d7d;
+}
+/* IE10 */
+input:-ms-input-placeholder {
+	color: #7d7d7d;
 }

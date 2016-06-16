@@ -15,51 +15,53 @@
    a maximum of 31 style sheets to be loaded before silently failing */
 /* Import font styles */
 /* due to licensing, we have the open-source Lato as a fallback when Prelude is
-   not available. However,  */
+   not available. However, since Prelude is aparently never available, let's
+   just remove it and get done with it, the last time you see Prelude should
+   be here, in this comment, and no where more, R.I.P Preulde :[  */
 @font-face {
   font-family: "Mochi Light";
-  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-Light.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-Light.ttf") format("truetype"), url("../fonts/lato-light.woff") format("woff"), url("../fonts/lato-light.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-light.woff") format("woff"), url("../fonts/lato-light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mochi Medium";
-  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-Medium.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-Medium.ttf") format("truetype"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mochi Medium";
-  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-MediumItalic.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-MediumItalic.ttf") format("truetype"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
   font-style: italic;
 }
 @font-face {
   font-family: "Mochi Bold Italic";
-  src: local("☺"), url("../fonts/PreludeWGL/PreludeWGL-BoldItalic.woff") format("woff"), url("../fonts/PreludeWGL/PreludeWGL-BoldItalic.ttf") format("truetype"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mochi Condensed Med";
-  src: local("☺"), url("../fonts/PreludeCondensed-Medium.woff") format("woff"), url("../fonts/PreludeCondensed-Medium.ttf") format("truetype"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mochi Med Oblique";
-  src: local("☺"), url("../fonts/Prelude-MediumOblique.woff") format("woff"), url("../fonts/Prelude-MediumOblique.ttf") format("truetype"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
   font-weight: normal;
   font-style: oblique;
 }
 @font-face {
   font-family: "Mochi Bold";
-  src: local("☺"), url("../fonts/Prelude-Bold.woff") format("woff"), url("../fonts/Prelude-bold.ttf") format("truetype"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Mochi Bold Oblique";
-  src: local("☺"), url("../fonts/Prelude-BoldOblique.woff") format("woff"), url("../fonts/Prelude-boldOblique.ttf") format("truetype"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
+  src: local("☺"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
   font-weight: bold;
   font-style: oblique;
 }
@@ -399,7 +401,7 @@ button > .button-base {
   border-color: #a2a2a2;
 }
 /* Checkbox.css */
-.checkbox {
+input[type="checkbox"] {
   cursor: pointer;
   height: 22px;
   width: 22px;
@@ -408,77 +410,60 @@ button > .button-base {
   vertical-align: middle;
   border-radius: 13px;
   border: 2px solid #646464;
-}
-.checkbox[checked] {
-  background: url(../images/checkbox.png) no-repeat;
-  padding: 2px;
-  border-width: 0px;
-}
-.checkbox-animate {
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.checkbox.disabled {
+input[type="checkbox"]:checked {
+  background: url(../images/checkbox.png) no-repeat;
+  padding: 2px;
+  border-width: 0px;
+}
+input[type="checkbox"]:disabled {
   opacity: 0.4;
 }
 /* Input.css */
-.input-decorator > input {
+input {
   /* reset */
   margin: 0px;
-  padding: 0px;
-  border: none;
+  padding: 1px 8px 5px 8px;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: #a2a2a2;
   outline: none;
   cursor: pointer;
-  background-color: transparent;
+  background-color: white;
   box-shadow: none;
+  height: inherit;
   /* FIXME: hack for styling reset on Android */
   /* -webkit-appearance: caret;*/
   font-size: 14px;
   font-family: "Mochi Medium";
   color: #4b4b4b;
   font-style: italic;
-}
-.input-decorator.focused > input {
-  cursor: text;
-}
-.input-decorator.disabled > input {
-  cursor: default;
-}
-.input-decorator > input::-webkit-input-placeholder {
-  color: #7d7d7d;
-}
-.input-decorator > input:-moz-placeholder {
-  color: #7d7d7d;
-}
-/* IE10 */
-.input-decorator > input:-ms-input-placeholder {
-  color: #7d7d7d;
-}
-.input-animate {
   -webkit-transition: border-color 0.1s linear;
   -moz-transition: border-color 0.1s linear;
   -o-transition: border-color 0.1s linear;
   transition: border-color 0.1s linear;
 }
-/* InputDecorator.css */
-.input-decorator {
-  padding: 1px 8px 5px 8px;
-  border-radius: 16px;
-  border: 1px solid;
-  border-color: #a2a2a2;
-  background-color: white;
-  margin: 0;
-  height: inherit;
-}
-.input-decorator.focused {
+input:focus {
+  cursor: text;
   border-color: #69cdff;
 }
-.input-decorator.disabled {
-  /* FIXME: needed to color a disabled input placeholder. */
-  /*-webkit-text-fill-color: #888;*/
+input:disabled {
+  cursor: default;
   opacity: 0.4;
+}
+input::-webkit-input-placeholder {
+  color: #7d7d7d;
+}
+input:-moz-placeholder {
+  color: #7d7d7d;
+}
+/* IE10 */
+input:-ms-input-placeholder {
+  color: #7d7d7d;
 }
 /* RichText.css */
 .input-decorator > .richtext {
