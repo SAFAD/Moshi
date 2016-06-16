@@ -113,11 +113,6 @@
 .badge {
   padding: 8px 0 8px 0;
   min-width: 40px;
-  width: auto;
-  text-align: center;
-  vertical-align: middle;
-}
-.badge-inner {
   font-family: "Mochi Bold Italic";
   font-size: 12pt;
   height: 24px;
@@ -126,8 +121,18 @@
   width: auto;
   text-align: center;
   vertical-align: middle;
+  /*FIXME: debug purposes only*/
+  background-color: #69CDFF;
+  /*Badges are now by default round */
+  -webkit-border-radius: 20px;
+  /* Safari, Chrome */
+  -moz-border-radius: 20px;
+  /* Firefox */
+  border-radius: 20px;
+  /* CSS3 */
+  padding: 6px;
 }
-.badge-inner.oval {
+.badge.oval {
   -webkit-border-radius: 12px;
   /* Safari, Chrome */
   -moz-border-radius: 12px;
@@ -136,15 +141,6 @@
   /* CSS3 */
   padding-left: 8px;
   padding-right: 8px;
-}
-.badge-inner.round {
-  -webkit-border-radius: 12px;
-  /* Safari, Chrome */
-  -moz-border-radius: 12px;
-  /* Firefox */
-  border-radius: 12px;
-  /* CSS3 */
-  padding: 0px;
 }
 /* Button.css */
 button {
@@ -381,7 +377,7 @@ button > .button-base {
   opacity: 0.4;
 }
 /* RadioButton.css */
-.radio-button {
+input[type="radio"] {
   cursor: pointer;
   height: 22px;
   width: 22px;
@@ -390,14 +386,12 @@ button > .button-base {
   vertical-align: middle;
   border-radius: 13px;
   border: 2px solid #646464;
-}
-.radio-button-animate {
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.radio-button.disabled {
+input[type="radio"]:disabled {
   border-color: #a2a2a2;
 }
 /* Checkbox.css */
@@ -610,7 +604,8 @@ input:-ms-input-placeholder {
   background-position: center 0;
 }
 /* TextArea.css */
-.input-decorator > textarea {
+/* TODO: needs more proper styling to be honest...*/
+textarea {
   margin: 10px 0px 6px;
   padding: 0;
   border: none;
@@ -627,16 +622,14 @@ input:-ms-input-placeholder {
   font-family: "Mochi Medium";
   color: #4b4b4b;
   font-style: italic;
-}
-.input-decorator.focused > textarea {
-  cursor: text;
-}
-.input-decorator.disabled > textarea {
-  cursor: default;
-}
-.textarea {
   /* need >=50px for scrollbar to be usable on mac */
   min-height: 50px;
+}
+textarea:focus {
+  cursor: text;
+}
+textarea:disabled {
+  cursor: default;
 }
 textarea::-webkit-scrollbar {
   width: 4px;

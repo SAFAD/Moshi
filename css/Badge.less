@@ -5,8 +5,6 @@
 	width: auto;
 	text-align: center;
 	vertical-align: middle;
-}
-.badge-inner {
 	font-family: "Mochi Bold Italic";
 	font-size: 12pt;
 	height: 24px;
@@ -15,17 +13,18 @@
 	width: auto;
 	text-align: center;
 	vertical-align: middle;
+	/*FIXME: debug purposes only*/
+	background-color: #69CDFF;
+	/*Badges are now by default round */
+	-webkit-border-radius: 20px; /* Safari, Chrome */
+	-moz-border-radius: 20px; /* Firefox */
+  	border-radius: 20px; /* CSS3 */
+  	padding: 6px;
 }
-.badge-inner.oval {
+.badge.oval {
 	-webkit-border-radius: 12px; /* Safari, Chrome */
 	-moz-border-radius: 12px; /* Firefox */
   	border-radius: 12px; /* CSS3 */
-  	padding-left: 8px;
-  	padding-right: 8px;
-}
-.badge-inner.round {
-	-webkit-border-radius: 12px; /* Safari, Chrome */
-	-moz-border-radius: 12px; /* Firefox */
-  	border-radius: 12px; /* CSS3 */
-  	padding: 0px;
+  	padding-left: 6px;
+  	padding-right: 6px;
 }
