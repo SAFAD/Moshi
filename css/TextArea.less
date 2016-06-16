@@ -1,5 +1,6 @@
 /* TextArea.css */
-.input-decorator > textarea {
+/* TODO: needs more proper styling to be honest...*/
+textarea {
 	margin: 10px 0px 6px;
 	padding: 0;
 	border: none;
@@ -16,16 +17,14 @@
 	font-family: "Mochi Medium";
 	color: #4b4b4b;
 	font-style: italic;
-}
-.input-decorator.focused > textarea {
-	cursor: text;
-}
-.input-decorator.disabled > textarea {
-	cursor: default;
-}
-.textarea {
 	/* need >=50px for scrollbar to be usable on mac */
 	min-height: 50px;
+}
+textarea:focus {
+	cursor: text;
+}
+textarea:disabled {
+	cursor: default;
 }
 textarea::-webkit-scrollbar {
 	width: 4px;
