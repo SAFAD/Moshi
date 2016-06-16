@@ -10,7 +10,7 @@
   outline: none;
 }
 
-.mochi {
+body {
   color: @text-color;
   font-family: @font-family;
   font-size: @font-size;
@@ -22,11 +22,16 @@
 }
 
 /* prevent IE from inheriting line-height for these elements */
-.mochi button, .mochi label, .mochi input {
+button, label, input {
   line-height: normal;
 }
 
-.selected {
+a, a:hover{
+  text-decoration: none;
+  color: @action-color;
+}
+
+*::selection {
   background-color: @selected-background;
 }
 
