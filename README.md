@@ -1,5 +1,5 @@
 # Moshi
-Something to be soon awesome
+A Javascript-less Front-end framework tailored for mobile and dashboards.
 
 ## What ?
 Moshi is a fork of [enyojs/mochi](https://github.com/enyojs/mochi/) to serve one simple purpose; impress the folks [@Pelagicore](http://www.pelagicore.com).
