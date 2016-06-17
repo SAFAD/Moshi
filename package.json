@@ -1,17 +1,21 @@
 {
   "name": "Moshi",
-  "description": "A Javascript-less Front-end framework tailored for mobile
-  and dashboards.",
-  "version": "0.2",
+  "description": "A Javascript-less Front-end framework tailored for mobile and dashboards.",
+  "version": "0.2.0",
   "author": "Sadaoui Abderrahim",
-  "bugs": { "url": "https://github.com/SAFAD/Moshi/issues" },
+  "repository": "https://github.com/SAFAD/Moshi",
+  "license": "SEE LICENSE IN LICENSE",
+  "contributors": [ "Sadaoui Abderrahim <a.sadaoui@outlook.com> (https://github.com/SAFAD)" ],
+  "bugs": {
+    "url": "https://github.com/SAFAD/Moshi/issues"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-csscomb": "^3.0.7",
     "gulp-less": "^3.1.0",
-    "gulp-livereload": "^3.8.1"
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2"
   },
-  "repository": "https://github.com/SAFAD/Moshi",
-  "license": "SEE LICENSE IN LICENSE"
+  "keywords": ["css", "frontend", "framework"]
 }
