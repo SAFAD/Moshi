@@ -5,13 +5,20 @@ var gulp         = require('gulp'),
     livereload   = require('gulp-livereload'),
     autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('build', function(){
-  //first we autoprefix
-  //then we comb
-  //and then we compile with LESS which is the final step
+gulp.task('autoprefix', function(){
+    return gulp.src('css/*.less')
+      .pipe(autoprefixer('last 2 versions'))
+      .pipe(gulp.dest('css'));
+});
+
+gulp.task('comb', function(){
+  return gulp.src('css/*.less')
+    .pipe(comb())
+    .pipe(gulp.dest('css'));
+});
+//main build task runs after autoprefixing and combing LESS files
+gulp.task('build', ['autoprefix', 'comb'], function(){
   return gulp.src('css/moshi.less')
-    .pipe(autoprefixer('last 2 versions')) //FIXME: does it autoprefixes *.less?
-    .pipe(comb()) //FIXME: combing doesn't go through all the files
     .pipe(less())
     .pipe(rename('app.css'))
     .pipe(gulp.dest('stylesheets'));
