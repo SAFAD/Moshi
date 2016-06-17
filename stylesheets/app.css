@@ -20,62 +20,62 @@
    just remove it and get done with it, the last time you see Prelude should
    be here, in this comment, and no where more, R.I.P Preulde :[  */
 @font-face {
-  font-family: "Mochi Light";
-  src: local("☺"), url("../fonts/lato-light.woff") format("woff"), url("../fonts/lato-light.ttf") format("truetype");
+  font-family: 'Mochi Light';
   font-weight: normal;
   font-style: normal;
+  src: local('☺'), url('../fonts/lato-light.woff') format('woff'), url('../fonts/lato-light.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Medium";
-  src: local("☺"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
+  font-family: 'Mochi Medium';
   font-weight: normal;
   font-style: normal;
+  src: local('☺'), url('../fonts/lato-regular.woff') format('woff'), url('../fonts/lato-regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Medium";
-  src: local("☺"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
+  font-family: 'Mochi Medium';
   font-style: italic;
+  src: local('☺'), url('../fonts/lato-italic.woff') format('woff'), url('../fonts/lato-italic.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Bold Italic";
-  src: local("☺"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
+  font-family: 'Mochi Bold Italic';
   font-weight: normal;
   font-style: normal;
+  src: local('☺'), url('../fonts/lato-bolditalic.woff') format('woff'), url('../fonts/lato-bolditalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Condensed Med";
-  src: local("☺"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
+  font-family: 'Mochi Condensed Med';
   font-weight: normal;
   font-style: normal;
+  src: local('☺'), url('../fonts/lato-regular.woff') format('woff'), url('../fonts/lato-regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Med Oblique";
-  src: local("☺"), url("../fonts/lato-italic.woff") format("woff"), url("../fonts/lato-italic.ttf") format("truetype");
+  font-family: 'Mochi Med Oblique';
   font-weight: normal;
   font-style: oblique;
+  src: local('☺'), url('../fonts/lato-italic.woff') format('woff'), url('../fonts/lato-italic.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Bold";
-  src: local("☺"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype");
+  font-family: 'Mochi Bold';
   font-weight: bold;
   font-style: normal;
+  src: local('☺'), url('../fonts/lato-bold.woff') format('woff'), url('../fonts/lato-bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Mochi Bold Oblique";
-  src: local("☺"), url("../fonts/lato-bolditalic.woff") format("woff"), url("../fonts/lato-bolditalic.ttf") format("truetype");
+  font-family: 'Mochi Bold Oblique';
   font-weight: bold;
   font-style: oblique;
+  src: local('☺'), url('../fonts/lato-bolditalic.woff') format('woff'), url('../fonts/lato-bolditalic.ttf') format('truetype');
 }
 /* Prevent browser's default focus treatment (at least in Chrome) */
 :focus {
   outline: none;
 }
 body {
-  color: #333333;
-  font-family: "Mochi Bold Oblique";
+  font-family: 'Mochi Bold Oblique';
   font-size: 20px;
   cursor: default;
-  background-color: #F5F5F5;
+  color: #333;
+  background-color: #f5f5f5;
   box-shadow: inset 0 0 169px rgba(0, 0, 0, 0.3);
   /* remove automatic tap highlight color */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -89,10 +89,10 @@ input {
 a,
 a:hover {
   text-decoration: none;
-  color: #69CDFF;
+  color: #69cdff;
 }
 *::selection {
-  background-color: #C4E3FE;
+  background-color: #c4e3fe;
 }
 /* style that removes transition effects from elements */
 .no-animate {
@@ -102,34 +102,33 @@ a:hover {
   transition: none;
 }
 .item {
-  font-family: "Mochi Med Oblique";
+  font-family: 'Mochi Med Oblique';
   font-size: 14px;
-  color: #323232;
   font-style: oblique;
+  color: #323232;
 }
 .toolbar-inline > * {
   display: inline-block;
-  vertical-align: middle;
-  margin: 4px 6px 5px;
   box-sizing: border-box;
+  margin: 4px 6px 5px;
+  vertical-align: middle;
 }
 /* LESS pre-calculations */
 /* Individual Widget CSS */
 /* Badge.css */
 .badge {
-  padding: 8px 0 8px 0;
-  min-width: 40px;
-  font-family: "Mochi Bold Italic";
+  font-family: 'Mochi Bold Italic';
   font-size: 12pt;
-  height: 24px;
   line-height: 24px;
-  min-width: 24px;
   width: auto;
+  min-width: 40px;
+  min-width: 24px;
+  height: 24px;
+  padding: 8px 0 8px 0;
+  padding: 6px;
   text-align: center;
   vertical-align: middle;
   color: #fff;
-  /*FIXME: debug purposes only*/
-  background-color: #69CDFF;
   /*Badges are now by default round */
   -webkit-border-radius: 20px;
   /* Safari, Chrome */
@@ -137,50 +136,51 @@ a:hover {
   /* Firefox */
   border-radius: 20px;
   /* CSS3 */
-  padding: 6px;
+  /*FIXME: debug purposes only*/
+  background-color: #69cdff;
 }
 .badge.oval {
+  padding-right: 6px;
+  padding-left: 6px;
   -webkit-border-radius: 12px;
   /* Safari, Chrome */
   -moz-border-radius: 12px;
   /* Firefox */
   border-radius: 12px;
   /* CSS3 */
-  padding-left: 6px;
-  padding-right: 6px;
 }
 /* Button.css */
 button {
-  position: relative;
-  border-width: 0px;
-  margin: 0px;
-  padding: 0px;
-  background-color: transparent;
-  white-space: nowrap;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+  background-color: transparent;
 }
 button:focus {
   outline: none;
 }
 button::-moz-focus-inner {
-  border: 0px;
+  border: 0;
 }
 .button-bar {
   position: absolute;
   top: 35px;
-  left: 0px;
+  left: 0;
+  width: 0;
   height: 1px;
-  width: 0px;
   background-color: #69cdff;
 }
 button > .button-bar {
-  background-color: transparent;
   -webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
-  -o-transition: background-color 0.2s linear;
   -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
+  background-color: transparent;
 }
 button:active:hover:not([disabled]) > .button-bar {
   background-color: #69cdff;
@@ -189,7 +189,7 @@ button.active > .button-bar {
   background-color: #69cdff;
 }
 button.disabled {
-  opacity: 0.4;
+  opacity: .4;
 }
 .warning > .button-base {
   color: #ff4a4a;
@@ -201,76 +201,76 @@ button.active.warning > .button-bar {
   background-color: #ff4a4a;
 }
 button > .button-base {
+  font-size: 70%;
+  line-height: inherit;
   margin: 3px;
   margin-right: 5px;
-  padding: 0px;
-  line-height: inherit;
-  font-size: 70%;
+  padding: 0;
 }
 .view-select-button > .button-base {
-  height: 34px;
-  line-height: 34px;
-  vertical-align: middle;
   font-size: inherit;
+  line-height: 34px;
+  height: 34px;
+  vertical-align: middle;
 }
 .button-base {
-  display: inline-block;
-  font-family: "Mochi Bold Oblique";
+  font-family: 'Mochi Bold Oblique';
   font-size: inherit;
-  color: #323232;
-  font-style: oblique;
   font-weight: bold;
-  border-width: 0px;
-  background-color: transparent;
-  letter-spacing: normal;
-  margin: 2px;
-  padding: 1px 0px;
-  white-space: nowrap;
+  font-style: oblique;
+  display: inline-block;
   height: initial;
+  margin: 2px;
+  padding: 1px 0;
   -webkit-transition: letter-spacing 0.1s ease-in-out;
   -moz-transition: letter-spacing 0.1s ease-in-out;
-  -o-transition: letter-spacing 0.1s ease-in-out;
   -ms-transition: letter-spacing 0.1s ease-in-out;
+  -o-transition: letter-spacing 0.1s ease-in-out;
   transition: letter-spacing 0.1s ease-in-out;
+  white-space: nowrap;
+  letter-spacing: normal;
+  color: #323232;
+  border-width: 0;
+  background-color: transparent;
 }
 /* ButtonColors.css */
 .button-affirmative > .button-base,
 .button-affirmative > .button-decorator {
-  color: #00dd11;
+  color: #0d1;
 }
 .button:active:hover:not([disabled]).button-affirmative > .button-bar {
-  color: #00dd11;
+  color: #0d1;
 }
 .button.active.button-affirmative > .button-bar {
-  color: #00dd11;
+  color: #0d1;
 }
 .button-blue > .button-base,
 .button-blue > .button-decorator {
-  color: #35A8EE;
+  color: #35a8ee;
 }
 .button:active:hover:not([disabled]).button-blue > .button-bar {
-  color: #35A8EE;
+  color: #35a8ee;
 }
 .button.active.button-blue > .button-bar {
-  color: #35A8EE;
+  color: #35a8ee;
 }
 /* ButtonDecorator.css */
 .button-decorator {
-  font-family: "Mochi Bold";
+  font-family: 'Mochi Bold';
   font-size: inherit;
-  color: #4b4b4b;
   font-weight: bold;
   display: inline-block;
+  color: #4b4b4b;
 }
 .button-decorator-bookened {
-  vertical-align: top;
-  margin: 0px;
-  padding: 0px;
   font-size: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
 }
 .button > .button-decorator-left {
-  padding: 0px;
   font-size: inherit;
+  padding: 0;
   /* Iffy method - prevents flickering in Chrome */
   /*
 	-webkit-transition: padding 0.1s ease-in-out;
@@ -282,20 +282,20 @@ button > .button-base {
   /* Preferred method */
   -webkit-transition: -webkit-transform 0.1s ease-in-out;
   -moz-transition: -moz-transform 0.1s ease-in-out;
-  -o-transition: -o-transform 0.1s ease-in-out;
   -ms-transition: -ms-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out;
 }
 .button:active:hover:not([disabled]) > .button-decorator-left {
   -webkit-transform: translateX(-4px);
   -moz-transform: translateX(-4px);
-  -o-transform: translateX(-4px);
   -ms-transform: translateX(-4px);
+  -o-transform: translateX(-4px);
   transform: translateX(-4px);
 }
 .button > .button-decorator-right {
-  padding: 0px;
   font-size: inherit;
+  padding: 0;
   /* Iffy method - prevents flickering in Chrome */
   /*
 	-webkit-transition: padding 0.1s ease-in-out;
@@ -307,15 +307,15 @@ button > .button-base {
   /* Preferred method */
   -webkit-transition: -webkit-transform 0.1s ease-in-out;
   -moz-transition: -moz-transform 0.1s ease-in-out;
-  -o-transition: -o-transform 0.1s ease-in-out;
   -ms-transition: -ms-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out;
 }
 .button:active:hover:not([disabled]) > .button-decorator-right {
   -webkit-transform: translateX(4px);
   -moz-transform: translateX(4px);
-  -o-transform: translateX(4px);
   -ms-transform: translateX(4px);
+  -o-transform: translateX(4px);
   transform: translateX(4px);
 }
 /* Icon.css & IconButton.css */
@@ -323,15 +323,15 @@ button > .button-base {
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
-  background-position: 0 0px;
+  background-position: 0 0;
 }
 .icon-button-item {
   display: inline-block;
-  margin: 2px;
-  padding: 1px 0px;
   width: 34px;
   height: 34px;
-  border-width: 0px;
+  margin: 2px;
+  padding: 1px 0;
+  border-width: 0;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
@@ -340,24 +340,24 @@ button > .button-base {
   background-position: 0 -24px;
 }
 .icon-button-item.disabled {
-  opacity: 0.4;
+  opacity: .4;
 }
 .icon-button {
   position: relative;
-  border-width: 0px;
-  margin: 0px;
-  padding: 0px;
-  height: 40px;
   width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
   background-color: transparent;
 }
 .icon-button > .button-bar {
-  background-color: transparent;
   -webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
-  -o-transition: background-color 0.2s linear;
   -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
+  background-color: transparent;
 }
 .icon-button:active:hover:not([disabled]) > .button-bar {
   background-color: #69cdff;
@@ -366,7 +366,7 @@ button > .button-base {
   background-color: #69cdff;
 }
 .icon-button.disabled {
-  opacity: 0.4;
+  opacity: .4;
 }
 .icon-button-bar {
   top: 38px;
@@ -374,79 +374,79 @@ button > .button-base {
 /* ViewSelector */
 .view-select-button {
   position: relative;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 .view-select-button > .button-base:active:hover:not([disabled]) {
   letter-spacing: 2px;
 }
 .view-select-button > .button-base[disabled] {
-  opacity: 0.4;
+  opacity: .4;
 }
 /* RadioButton.css */
-input[type="radio"] {
-  cursor: pointer;
-  height: 22px;
-  width: 22px;
-  margin: 0px;
+input[type='radio'] {
   display: inline-block;
-  vertical-align: middle;
-  border-radius: 13px;
-  border: 2px solid #646464;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
+  vertical-align: middle;
+  border: 2px solid #646464;
+  border-radius: 13px;
 }
-input[type="radio"]:disabled {
+input[type='radio']:disabled {
   border-color: #a2a2a2;
 }
 /* Checkbox.css */
-input[type="checkbox"] {
-  cursor: pointer;
-  height: 22px;
-  width: 22px;
-  margin: 0px;
+input[type='checkbox'] {
   display: inline-block;
-  vertical-align: middle;
-  border-radius: 13px;
-  border: 2px solid #646464;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  cursor: pointer;
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   -o-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
+  vertical-align: middle;
+  border: 2px solid #646464;
+  border-radius: 13px;
 }
-input[type="checkbox"]:checked {
-  background: url(../images/checkbox.png) no-repeat;
+input[type='checkbox']:checked {
   padding: 2px;
-  border-width: 0px;
+  border-width: 0;
+  background: url(../images/checkbox.png) no-repeat;
 }
-input[type="checkbox"]:disabled {
-  opacity: 0.4;
+input[type='checkbox']:disabled {
+  opacity: .4;
 }
 /* Input.css */
 input {
-  /* reset */
-  margin: 0px;
-  padding: 1px 8px 5px 8px;
-  border-radius: 16px;
-  border: 1px solid;
-  border-color: #a2a2a2;
-  outline: none;
-  cursor: pointer;
-  background-color: white;
-  box-shadow: none;
-  height: inherit;
+  font-family: 'Mochi Medium';
   /* FIXME: hack for styling reset on Android */
   /* -webkit-appearance: caret;*/
   font-size: 14px;
-  font-family: "Mochi Medium";
-  color: #4b4b4b;
   font-style: italic;
+  height: inherit;
+  /* reset */
+  margin: 0;
+  padding: 1px 8px 5px 8px;
+  cursor: pointer;
   -webkit-transition: border-color 0.1s linear;
   -moz-transition: border-color 0.1s linear;
   -o-transition: border-color 0.1s linear;
   transition: border-color 0.1s linear;
+  color: #4b4b4b;
+  border: 1px solid;
+  border-color: #a2a2a2;
+  border-radius: 16px;
+  outline: none;
+  background-color: white;
+  box-shadow: none;
 }
 input:focus {
   cursor: text;
@@ -454,7 +454,7 @@ input:focus {
 }
 input:disabled {
   cursor: default;
-  opacity: 0.4;
+  opacity: .4;
 }
 input::-webkit-input-placeholder {
   color: #7d7d7d;
@@ -468,19 +468,19 @@ input:-ms-input-placeholder {
 }
 /* RichText.css */
 .input-decorator > .richtext {
-  margin: 0px;
-  padding: 0px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  box-shadow: none;
+  font-family: 'Mochi Medium';
   /* FIXME: hack for styling reset on Android */
   /* -webkit-appearance: caret;*/
   font-size: 14px;
-  font-family: "Mochi Medium";
-  color: #4b4b4b;
   font-style: italic;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #4b4b4b;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 .input-decorator.focused > .richtext {
   cursor: text;
@@ -490,12 +490,12 @@ input:-ms-input-placeholder {
 }
 /* Pasting rich text adds <p> tag with a margin-top value of 16px */
 .richtext > p {
-  margin-top: 0px;
+  margin-top: 0;
 }
 /* ProgressBar.css */
 .progress-bar {
-  height: 1px;
   min-width: 128px;
+  height: 1px;
   background-color: #a2a2a2;
 }
 .progress-bar-bar {
@@ -504,30 +504,30 @@ input:-ms-input-placeholder {
 }
 /* ProgressText.css */
 .progress-text {
-  margin: 24px 16px 0px;
+  font-family: 'Mochi Med Oblique';
   font-size: 12px;
-  color: #a2a2a2;
-  font-family: "Mochi Med Oblique";
   font-style: oblique;
+  margin: 24px 16px 0;
+  color: #a2a2a2;
 }
 .progress-text-box {
   position: relative;
-  height: 24px;
   overflow: hidden;
+  height: 24px;
 }
 .progress-text-underwear {
+  line-height: 12px;
   position: absolute;
   display: inline-block;
   color: #a2a2a2;
-  line-height: 12px;
 }
 .progress-text-outerwear {
+  line-height: 12px;
   position: absolute;
   display: inline-block;
-  color: #69cdff;
-  line-height: 12px;
   overflow: hidden;
   white-space: nowrap;
+  color: #69cdff;
 }
 /* Slider.css */
 .slider {
@@ -537,46 +537,46 @@ input:-ms-input-placeholder {
 .slider-taparea {
   position: absolute;
   top: -16px;
-  height: 32px;
   width: 100%;
+  height: 32px;
 }
 .slider-knob {
   position: relative;
-  height: 16px;
   width: 16px;
-  border-radius: 8px;
+  height: 16px;
   margin: -8px -9px;
+  border-radius: 8px;
   background-color: #69cdff;
 }
 .slider-knob.active,
 .slider-knob:active:hover {
-  height: 36px;
   width: 36px;
-  border-radius: 18px;
+  height: 36px;
   margin: -18px -20px;
+  border-radius: 18px;
 }
 .slider-popup {
   position: absolute;
-  display: block;
   z-index: 20;
-  left: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
+  display: block;
   width: 62px;
   height: 37px;
   padding-left: 4px;
 }
 .slider-popup-label {
+  font-family: 'Mochi Medium';
+  font-size: 14px;
+  line-height: 32px;
   position: absolute;
   top: 1px;
   width: 60px;
   height: 32px;
-  white-space: nowrap;
-  font-family: "Mochi Medium";
-  color: #fff;
   text-align: center;
-  line-height: 32px;
   vertical-align: middle;
-  font-size: 14px;
+  white-space: nowrap;
+  color: #fff;
 }
 .slider-popup.above {
   top: -56px;
@@ -589,9 +589,9 @@ input:-ms-input-placeholder {
 */
 /* Spinner.css */
 .spinner {
+  display: inline-block;
   width: 52px;
   height: 52px;
-  display: inline-block;
   background-image: url(../images/spinner-dark.gif);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -613,24 +613,24 @@ input:-ms-input-placeholder {
 /* TextArea.css */
 /* TODO: needs more proper styling to be honest...*/
 textarea {
-  margin: 10px 0px 6px;
-  padding: 0;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  box-shadow: none;
-  /* Remove scrollbars and resize handle */
-  resize: none;
-  overflow: auto;
+  font-family: 'Mochi Medium';
   /* FIXME: hack for styling reset on Android */
   /* -webkit-appearance: caret;*/
   font-size: 14px;
-  font-family: "Mochi Medium";
-  color: #4b4b4b;
   font-style: italic;
+  overflow: auto;
   /* need >=50px for scrollbar to be usable on mac */
   min-height: 50px;
+  margin: 10px 0 6px;
+  padding: 0;
+  /* Remove scrollbars and resize handle */
+  resize: none;
+  cursor: pointer;
+  color: #4b4b4b;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 textarea:focus {
   cursor: text;
@@ -643,41 +643,41 @@ textarea::-webkit-scrollbar {
 }
 textarea::-webkit-scrollbar-track-piece {
   margin-top: 4px;
-  margin-bottom: 0px;
-  background-color: #fff;
+  margin-bottom: 0;
   -webkit-border-radius: 10px;
+  background-color: #fff;
 }
 textarea::-webkit-scrollbar-thumb:vertical {
   height: 10px;
-  background-color: #7d7d7d;
   -webkit-border-radius: 10px;
+  background-color: #7d7d7d;
 }
 /* ToggleButton.css */
 .toggle-button {
-  display: inline-block;
-  height: 24px;
-  line-height: 24px;
-  min-width: 48px;
-  vertical-align: middle;
-  border-radius: 12px;
-  background-size: auto 100%;
-  color: white;
   font-size: 14px;
   font-weight: bold;
+  line-height: 24px;
+  display: inline-block;
+  min-width: 48px;
+  height: 24px;
+  vertical-align: middle;
   text-transform: uppercase;
+  color: white;
+  border-radius: 12px;
+  background-size: auto 100%;
 }
 .toggle-button-knob {
   position: relative;
+  left: 0;
+  overflow: hidden;
   width: 20px;
   height: 20px;
   margin: 2px;
   border-radius: 10px;
   background-color: white;
-  left: 0px;
-  overflow: hidden;
 }
 .toggle-button.disabled {
-  opacity: 0.4;
+  opacity: .4;
   filter: alpha(opacity=40);
 }
 .toggle-animate {
@@ -689,26 +689,26 @@ textarea::-webkit-scrollbar-thumb:vertical {
 /* Header.css */
 .header {
   height: 64px;
-  padding: 0px 32px;
+  padding: 0 32px;
   white-space: nowrap;
 }
 .header-content {
-  font-family: "Mochi Light";
+  font-family: 'Mochi Light';
   font-size: 36px;
   line-height: 32px;
-  color: #4b4b4b;
-  padding-top: 30px;
-  text-overflow: ellipsis;
-  text-transform: uppercase;
-  overflow: hidden;
-  white-space: nowrap;
   display: inline-block;
+  overflow: hidden;
+  padding-top: 30px;
   vertical-align: text-bottom;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: #4b4b4b;
 }
 .header-controls {
   display: inline-block;
-  vertical-align: bottom;
   padding-top: 2px;
+  vertical-align: bottom;
 }
 .header-controls-first {
   padding-left: 56px;
@@ -720,48 +720,48 @@ textarea::-webkit-scrollbar-thumb:vertical {
 /* Subheader.css */
 .subheader {
   height: 56px;
-  padding: 0px 32px;
+  padding: 0 32px;
   white-space: nowrap;
 }
 .subheader-content {
-  font-family: "Mochi Medium";
+  font-family: 'Mochi Medium';
   font-size: 18px;
   font-style: italic;
-  color: #323232;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   /* 56px height */
   line-height: 26px;
+  overflow: hidden;
   padding-top: 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #323232;
 }
 /* Collapsable.css */
 .collapsable-header {
-  font-family: "Mochi Medium";
+  font-family: 'Mochi Medium';
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  color: #323232;
   padding: 0 32px 0 32px;
+  color: #323232;
 }
 .collapsable-item {
-  font-family: "Mochi Medium";
+  font-family: 'Mochi Medium';
   font-size: 14px;
   font-weight: bold;
   font-style: italic;
-  color: #4b4b4b;
   padding: 0 0 48px 32px;
+  color: #4b4b4b;
 }
 .collapsable-footer {
   height: 16px;
-  border-top: 0px transparent;
-  border-bottom: 1px solid #CCCCCC;
+  border-top: 0 transparent;
+  border-bottom: 1px solid #ccc;
   border-radius: 32px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .contextual-popup-title {
   font-weight: bold;
-  padding: 24px 32px 0px;
+  padding: 24px 32px 0;
 }
 .contextual-popup-scroller {
   padding: 24px 32px;
@@ -774,25 +774,25 @@ textarea::-webkit-scrollbar-thumb:vertical {
 .contextual-popup,
 .mochi.contextual-popup {
   font-size: 14px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.44);
-  border: 2px solid #646464;
-  border-radius: 24px;
-  padding: 6px;
-  color: #4b4b4b;
-  background-color: #ffffff;
   min-width: 150px;
   margin-top: 2px;
+  padding: 6px;
+  color: #4b4b4b;
+  border: 2px solid #646464;
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.44);
 }
 /*setup the nub*/
 .contextual-popup::after {
-  content: '';
   position: absolute;
+  content: '';
 }
 /*for popups above activator*/
 .contextual-popup.vertical.above {
   top: auto;
-  margin-top: -10px;
   bottom: 100%;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 /*for popups below activator*/
@@ -810,12 +810,12 @@ textarea::-webkit-scrollbar-thumb:vertical {
 /****nub positioning for vertical popups****/
 /*horizontally centered nub*/
 .contextual-popup.vertical::after {
-  content: '';
   position: absolute;
   top: -20px;
   left: 34%;
   width: 71px;
   height: 20px;
+  content: '';
   background: transparent url(../images/contextual-popup-nubs/up.png) no-repeat;
 }
 /*nub near horizontal left*/
@@ -837,23 +837,23 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 .contextual-popup.vertical.below.right::after {
   top: 0%;
-  margin-top: -20px;
   width: 71px;
   height: 20px;
+  margin-top: -20px;
   background: transparent url(../images/contextual-popup-nubs/up.png) no-repeat;
 }
 .contextual-popup.vertical.below.left::after {
   top: 0%;
-  margin-top: -20px;
   width: 71px;
   height: 20px;
+  margin-top: -20px;
   background: transparent url(../images/contextual-popup-nubs/up.png) no-repeat;
 }
 /****nub positioning for left/right popups****/
 /*vertically centered nub for popups on left of activator*/
 .contextual-popup.right::after {
-  left: 100%;
   top: 35%;
+  left: 100%;
   width: 20px;
   height: 71px;
   background: transparent url(../images/contextual-popup-nubs/right.png) no-repeat;
@@ -869,11 +869,11 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 /*vertically centered nub for popups on right of activator*/
 .contextual-popup.left::after {
+  top: 35%;
   left: 0%;
   width: 20px;
   height: 71px;
   margin-left: -20px;
-  top: 35%;
   background: transparent url(../images/contextual-popup-nubs/left.png) no-repeat;
 }
 /*nub near vertical top for popups on right of activator*/
@@ -889,25 +889,25 @@ textarea::-webkit-scrollbar-thumb:vertical {
 /*vertical top corners*/
 /*for popups on the left of the activator*/
 .contextual-popup.vertical.right.corner {
-  margin-left: 0px;
+  margin-left: 0;
 }
 /*for popups on the right of the activator*/
 .contextual-popup.vertical.left.corner {
-  margin-left: 0px;
+  margin-left: 0;
 }
 .contextual-popup.vertical.below.left.corner {
-  border-top-right-radius: 0px;
+  border-top-right-radius: 0;
 }
 .contextual-popup.vertical.below.right.corner {
-  border-top-left-radius: 0px;
+  border-top-left-radius: 0;
 }
 .contextual-popup.vertical.below.left.corner::after {
   top: 0%;
   left: 100%;
-  margin-top: -14px;
-  margin-left: -30px;
   width: 71px;
   height: 20px;
+  margin-top: -14px;
+  margin-left: -30px;
   background: transparent url(../images/contextual-popup-nubs/top-right-corner-up.png) no-repeat;
 }
 .contextual-popup.vertical.below.right.corner::after {
@@ -915,22 +915,22 @@ textarea::-webkit-scrollbar-thumb:vertical {
   left: 0%;
   width: 71px;
   height: 20px;
-  margin-left: -2px;
   margin-top: -14px;
+  margin-left: -2px;
   background: transparent url(../images/contextual-popup-nubs/top-left-corner-up.png) no-repeat;
 }
 /*vertical bottom corners*/
 .contextual-popup.left.above.corner {
-  border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0;
 }
 .contextual-popup.right.above.corner {
-  border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0;
 }
 .contextual-popup.vertical.left.above.corner::after {
   top: 100%;
-  margin-left: -30px;
   width: 71px;
   height: 20px;
+  margin-left: -30px;
   background: transparent url(../images/contextual-popup-nubs/bottom-right-corner-down.png) no-repeat;
 }
 .contextual-popup.vertical.right.above.corner::after {
@@ -941,10 +941,10 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 /*horizontal bottom corners*/
 .contextual-popup.left.low.corner {
-  border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0;
 }
 .contextual-popup.right.low.corner {
-  border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0;
 }
 .contextual-popup.left.low.corner::after {
   top: 100%;
@@ -961,10 +961,10 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 /*horizontal top corners*/
 .contextual-popup.left.high.corner {
-  border-top-left-radius: 0px;
+  border-top-left-radius: 0;
 }
 .contextual-popup.right.high.corner {
-  border-top-right-radius: 0px;
+  border-top-right-radius: 0;
 }
 .contextual-popup.left.high.corner::after {
   top: 0%;
@@ -986,10 +986,10 @@ textarea::-webkit-scrollbar-thumb:vertical {
 /* List.css */
 .list-scroll-fade {
   position: absolute;
-  text-align: center;
   display: inline-block;
-  height: 4px;
   width: 100%;
+  height: 4px;
+  text-align: center;
 }
 .list-scroll-fade.top {
   top: 0;
@@ -999,72 +999,72 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 .list-scroll-fade-row {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   height: 1px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .list-scroll-fade-row.row-1 {
+  width: 100%;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #c5c5c5), to(rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
   background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
   background-image: linear-gradient(left, rgba(255, 255, 255, 0), #c5c5c5, rgba(255, 255, 255, 0));
-  width: 100%;
 }
 .list-scroll-fade-row.row-2 {
+  width: 95%;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #d5d5d5), to(rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
   background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
   background-image: linear-gradient(left, rgba(255, 255, 255, 0), #d5d5d5, rgba(255, 255, 255, 0));
-  width: 95%;
 }
 .list-scroll-fade-row.row-3 {
+  width: 85%;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #e5e5e5), to(rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
   background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
   background-image: linear-gradient(left, rgba(255, 255, 255, 0), #e5e5e5, rgba(255, 255, 255, 0));
-  width: 85%;
 }
 .list-scroll-fade-row.row-4 {
+  width: 65%;
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #f5f5f5), to(rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
   background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
   background-image: linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
-  width: 65%;
 }
 /* ListHeader.css */
 .list-header {
-  font-family: "Mochi Medium";
+  font-family: 'Mochi Medium';
   font-size: 18pt;
   font-weight: bold;
   font-style: italic;
-  color: #323232;
   padding: 0 32px 0 32px;
+  color: #323232;
 }
 /* ListHeader.css */
 .list-header {
-  font-family: "Mochi Medium";
+  font-family: 'Mochi Medium';
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
-  color: #323232;
   padding: 0 32px 0 32px;
+  color: #323232;
 }
 /* ListItem.css */
 .list-item {
-  font-family: "Mochi Medium";
+  font-family: 'Mochi Medium';
   font-size: 14px;
   font-weight: bold;
   font-style: italic;
-  color: #4b4b4b;
   padding: 0 0 48px 32px;
+  color: #4b4b4b;
 }
 .highlight {
   background-image: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(255, 255, 255, 0)), color-stop(0.5, #f5f5f5), to(rgba(255, 255, 255, 0)));
@@ -1075,17 +1075,17 @@ textarea::-webkit-scrollbar-thumb:vertical {
   background-image: linear-gradient(left, rgba(255, 255, 255, 0), #f5f5f5, rgba(255, 255, 255, 0));
 }
 .highlight-border {
+  line-height: 4px;
   position: absolute;
   height: 4px;
   margin: 0 112px;
-  line-height: 4px;
 }
 .highlight-border:before,
 .highlight-border:after {
-  content: ' ';
+  position: absolute;
   width: 112px;
   height: 4px;
-  position: absolute;
+  content: ' ';
   background-repeat: no-repeat;
 }
 .highlight-border.top {
@@ -1112,17 +1112,17 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 /* wide lists, ie width >= 640px */
 .highlight-border.large {
+  line-height: 4px;
   position: absolute;
   height: 4px;
   margin: 0 320px;
-  line-height: 4px;
 }
 .highlight-border.large:before,
 .highlight-border.large:after {
-  content: ' ';
+  position: absolute;
   width: 320px;
   height: 4px;
-  position: absolute;
+  content: ' ';
   background-repeat: no-repeat;
 }
 .highlight-border.large.top {
@@ -1153,54 +1153,54 @@ textarea::-webkit-scrollbar-thumb:vertical {
   /* May need to modify this */
   width: 365px;
   padding-right: 45px;
-  background-color: #f5f5f5;
   /* box-shadow: inset 0 0 169px rgba(0, 0, 0, 0.3); */
   border-left: 1px solid #ccc;
   border-top-left-radius: 45px;
+  background-color: #f5f5f5;
 }
 .base-panel > *:first-child {
-  border-top-left-radius: 0px;
-  padding-right: 0px;
+  padding-right: 0;
+  border-top-left-radius: 0;
 }
 /*
 	Put anything you reference with "url()" in ../assets/
 	This way, you can minify your application, and just remove the "source" folder for production
 */
 .gridlist {
+  font-family: 'Mochi Light';
   background: #ccc;
-  font-family: "Mochi Light";
 }
 .gridlist-imageitem {
+  overflow: visible;
   width: 100%;
   height: 100%;
-  overflow: visible;
 }
 .gridlist-imageitem.selected {
-  background: orange;
-  padding: 3px;
+  margin-top: -3px;
   /*Offset the right and bottom padding by adding negative top and left margin*/
   margin-left: -3px;
-  margin-top: -3px;
+  padding: 3px;
+  background: orange;
 }
 .gridlist-imageitem img {
   width: 100%;
   height: 100%;
 }
 .gridlist-imageitem .caption {
-  font-family: "Mochi Light";
-  font-weight: bold;
-  text-align: center;
+  font-family: 'Mochi Light';
   font-size: 10pt;
-  text-transform: uppercase;
-  z-index: 10;
-  padding-top: 10px;
-  color: #555;
-  width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  height: 30px;
-  overflow: hidden;
-  bottom: 30px;
+  font-weight: bold;
   position: relative;
+  z-index: 10;
+  bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: #555;
   color: #fff;
 }

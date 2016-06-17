@@ -1,34 +1,46 @@
 /* ToggleButton.css */
-.toggle-button {
-	display: inline-block;
-	height: 24px;
-	line-height: 24px;
-	min-width: 48px;
-	vertical-align: middle;
-	border-radius: 12px;
-	background-size: auto 100%;
-	color: white;
-	font-size: 14px;
-	font-weight: bold;
-	text-transform: uppercase;
+.toggle-button
+{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+
+    display: inline-block;
+
+    min-width: 48px;
+    height: 24px;
+
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    color: white;
+    border-radius: 12px;
+    background-size: auto 100%;
 }
-.toggle-button-knob {
-	position: relative;
-	width: 20px;
-	height: 20px;
-	margin: 2px;
-	border-radius: 10px;
-	background-color: white;
-	left: 0px;
-	overflow: hidden;
+.toggle-button-knob
+{
+    position: relative;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+
+    border-radius: 10px;
+    background-color: white;
 }
-.toggle-button.disabled {
-	opacity: 0.4;
-	filter: alpha(opacity=40);
+.toggle-button.disabled
+{
+    opacity: .4;
+
+    filter: alpha(opacity=40);
 }
-.toggle-animate {
-	-webkit-transition: background-color 0.1s linear;
-	-moz-transition: background-color 0.1s linear;
-	-o-transition: background-color 0.1s linear;
-	transition: background-color 0.1s linear;
+.toggle-animate
+{
+    -webkit-transition: background-color .1s linear;
+       -moz-transition: background-color .1s linear;
+         -o-transition: background-color .1s linear;
+            transition: background-color .1s linear;
 }

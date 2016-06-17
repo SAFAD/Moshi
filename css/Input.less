@@ -1,42 +1,53 @@
 /* Input.css */
-input {
-	/* reset */
-	margin: 0px;
-	padding: 1px 8px 5px 8px;
-	border-radius: 16px;
-	border: 1px solid;
-	border-color: #a2a2a2;
-	outline: none;
-	cursor: pointer;
-	background-color: white;
-	box-shadow: none;
-	height: inherit;
-	/* FIXME: hack for styling reset on Android */
-	/* -webkit-appearance: caret;*/
-	font-size: 14px;
-	font-family: "Mochi Medium";
-	color: #4b4b4b;
-	font-style: italic;
-	-webkit-transition: border-color 0.1s linear;
-	-moz-transition: border-color 0.1s linear;
-	-o-transition: border-color 0.1s linear;
-	transition: border-color 0.1s linear;
+input
+{
+    font-family: 'Mochi Medium';
+    /* FIXME: hack for styling reset on Android */
+    /* -webkit-appearance: caret;*/
+    font-size: 14px;
+    font-style: italic;
+
+    height: inherit;
+    /* reset */
+    margin: 0;
+    padding: 1px 8px 5px 8px;
+
+    cursor: pointer;
+    -webkit-transition: border-color .1s linear;
+       -moz-transition: border-color .1s linear;
+         -o-transition: border-color .1s linear;
+            transition: border-color .1s linear;
+
+    color: #4b4b4b;
+    border: 1px solid;
+    border-color: #a2a2a2;
+    border-radius: 16px;
+    outline: none;
+    background-color: white;
+    box-shadow: none;
 }
-input:focus {
-	cursor: text;
-	border-color: #69cdff;
+input:focus
+{
+    cursor: text;
+
+    border-color: #69cdff;
 }
-input:disabled {
-	cursor: default;
-	opacity: 0.4;
+input:disabled
+{
+    cursor: default;
+
+    opacity: .4;
 }
-input::-webkit-input-placeholder {
-	color: #7d7d7d;
+input::-webkit-input-placeholder
+{
+    color: #7d7d7d;
 }
-input:-moz-placeholder {
-	color: #7d7d7d;
+input:-moz-placeholder
+{
+    color: #7d7d7d;
 }
 /* IE10 */
-input:-ms-input-placeholder {
-	color: #7d7d7d;
+input:-ms-input-placeholder
+{
+    color: #7d7d7d;
 }

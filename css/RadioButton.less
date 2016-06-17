@@ -1,19 +1,24 @@
 /* RadioButton.css */
-input[type="radio"]  {
-	cursor: pointer;
-	height: 22px;
-	width: 22px;
-	margin: 0px;
-	display: inline-block;
-	vertical-align: middle;
-	border-radius: 13px;
-	border: 2px solid #646464;
-	-webkit-transition: background-color 0.1s linear;
-	-moz-transition: background-color 0.1s linear;
-	-o-transition: background-color 0.1s linear;
-	transition: background-color 0.1s linear;
+input[type='radio']
+{
+    display: inline-block;
+
+    width: 22px;
+    height: 22px;
+    margin: 0;
+
+    cursor: pointer;
+    -webkit-transition: background-color .1s linear;
+       -moz-transition: background-color .1s linear;
+         -o-transition: background-color .1s linear;
+            transition: background-color .1s linear;
+    vertical-align: middle;
+
+    border: 2px solid #646464;
+    border-radius: 13px;
 }
 
-input[type="radio"]:disabled {
-	border-color: #a2a2a2;
+input[type='radio']:disabled
+{
+    border-color: #a2a2a2;
 }

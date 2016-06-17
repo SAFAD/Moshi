@@ -1,54 +1,72 @@
 /* Slider.css */
-.slider {
-	position: relative;
-	margin: 10px 20px;
+.slider
+{
+    position: relative;
+
+    margin: 10px 20px;
 }
-.slider-taparea {
-	position: absolute;
-	top: -16px;
-	height: 32px;
-	width: 100%;
+.slider-taparea
+{
+    position: absolute;
+    top: -16px;
+
+    width: 100%;
+    height: 32px;
 }
-.slider-knob {
-	position: relative;
-	height: 16px;
-	width: 16px;
-	border-radius: 8px;
-	margin: -8px -9px;
-	background-color: #69cdff;
+.slider-knob
+{
+    position: relative;
+
+    width: 16px;
+    height: 16px;
+    margin: -8px -9px;
+
+    border-radius: 8px;
+    background-color: #69cdff;
 }
 .slider-knob.active,
-.slider-knob:active:hover {
-	height: 36px;
-	width: 36px;
-	border-radius: 18px;
-	margin: -18px -20px;
+.slider-knob:active:hover
+{
+    width: 36px;
+    height: 36px;
+    margin: -18px -20px;
+
+    border-radius: 18px;
 }
-.slider-popup {
-	position: absolute;
-	display: block;
-	z-index: 20;
-	left: 0px;
-	top: 0px;
-	width: 62px;
-	height: 37px;
-	padding-left: 4px;
+.slider-popup
+{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 62px;
+    height: 37px;
+    padding-left: 4px;
 }
-.slider-popup-label {
-	position: absolute;
-	top: 1px;
-	width: 60px;
-	height: 32px;
-	white-space: nowrap;
-	font-family: "Mochi Medium";
-	color: #fff;
-	text-align: center;
-	line-height: 32px;
-	vertical-align: middle;
-	font-size: 14px;
+.slider-popup-label
+{
+    font-family: 'Mochi Medium';
+    font-size: 14px;
+    line-height: 32px;
+
+    position: absolute;
+    top: 1px;
+
+    width: 60px;
+    height: 32px;
+
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    color: #fff;
 }
-.slider-popup.above {
-	top: -56px;
+.slider-popup.above
+{
+    top: -56px;
 }
 /* below is commented out pending HI approval */
 /*

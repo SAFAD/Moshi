@@ -1,86 +1,113 @@
 /* Button.css */
-button {
-	position: relative;
-	border-width: 0px;
-	margin: 0px;
-	padding: 0px;
-	background-color: transparent;
-	white-space: nowrap;
-  	font-size:1.5rem;
-    line-height:1.5rem;
+button
+{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border-width: 0;
+    background-color: transparent;
 }
-button:focus {
-	outline: none;
+button:focus
+{
+    outline: none;
 }
-button::-moz-focus-inner {
-	border: 0px;
+button::-moz-focus-inner
+{
+    border: 0;
 }
-.button-bar {
-	position: absolute;
-	top: 35px;
-	left: 0px;
-	height: 1px;
-	width: 0px;
-	background-color: #69cdff;
+.button-bar
+{
+    position: absolute;
+    top: 35px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background-color: #69cdff;
 }
-button > .button-bar {
-	background-color: transparent;
-	-webkit-transition: background-color 0.2s linear;
-	-moz-transition: background-color 0.2s linear;
-	-o-transition: background-color 0.2s linear;
-	-ms-transition: background-color 0.2s linear;
-	transition: background-color 0.2s linear;
+button > .button-bar
+{
+    -webkit-transition: background-color .2s linear;
+       -moz-transition: background-color .2s linear;
+        -ms-transition: background-color .2s linear;
+         -o-transition: background-color .2s linear;
+            transition: background-color .2s linear;
+
+    background-color: transparent;
 }
-button:active:hover:not([disabled]) > .button-bar {
-	background-color: #69cdff;
+button:active:hover:not([disabled]) > .button-bar
+{
+    background-color: #69cdff;
 }
-button.active > .button-bar {
-	background-color: #69cdff;
+button.active > .button-bar
+{
+    background-color: #69cdff;
 }
-button.disabled {
-	opacity: 0.4;
+button.disabled
+{
+    opacity: .4;
 }
-.warning > .button-base {
-	color: #ff4a4a;
+.warning > .button-base
+{
+    color: #ff4a4a;
 }
-button:active:hover:not([disabled]).warning > .button-bar {
-	background-color: #ff4a4a;
+button:active:hover:not([disabled]).warning > .button-bar
+{
+    background-color: #ff4a4a;
 }
-button.active.warning > .button-bar {
-	background-color: #ff4a4a;
+button.active.warning > .button-bar
+{
+    background-color: #ff4a4a;
 }
 
-button > .button-base {
-	margin: 3px;
+button > .button-base
+{
+    font-size: 70%;
+    line-height: inherit;
+
+    margin: 3px;
     margin-right: 5px;
-	padding: 0px;
-	line-height: inherit;
-  	font-size:70%;
+    padding: 0;
 }
-.view-select-button > .button-base {
-	height: 34px;
-	line-height: 34px;
-	vertical-align: middle;
-    font-size:inherit;
-}
-.button-base {
-	display: inline-block;
-	font-family: "Mochi Bold Oblique";
-    font-size:inherit;
-	color: #323232;
-	font-style: oblique;
-	font-weight: bold;
-	border-width: 0px;
-	background-color: transparent;
-	letter-spacing: normal;
-	margin: 2px;
-	padding: 1px 0px;
-	white-space: nowrap;
-	height: initial;
+.view-select-button > .button-base
+{
+    font-size: inherit;
+    line-height: 34px;
 
-	-webkit-transition: letter-spacing 0.1s ease-in-out;
-	-moz-transition: letter-spacing 0.1s ease-in-out;
-	-o-transition: letter-spacing 0.1s ease-in-out;
-	-ms-transition: letter-spacing 0.1s ease-in-out;
-	transition: letter-spacing 0.1s ease-in-out;
+    height: 34px;
+
+    vertical-align: middle;
+}
+.button-base
+{
+    font-family: 'Mochi Bold Oblique';
+    font-size: inherit;
+    font-weight: bold;
+    font-style: oblique;
+
+    display: inline-block;
+
+    height: initial;
+    margin: 2px;
+    padding: 1px 0;
+
+    -webkit-transition: letter-spacing .1s ease-in-out;
+       -moz-transition: letter-spacing .1s ease-in-out;
+        -ms-transition: letter-spacing .1s ease-in-out;
+         -o-transition: letter-spacing .1s ease-in-out;
+            transition: letter-spacing .1s ease-in-out;
+    white-space: nowrap;
+    letter-spacing: normal;
+
+    color: #323232;
+    border-width: 0;
+    background-color: transparent;
 }

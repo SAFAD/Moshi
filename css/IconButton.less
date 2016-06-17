@@ -1,53 +1,69 @@
 /* Icon.css & IconButton.css */
-.icon {
-	width: 24px;
-	height: 24px;
-	background-repeat: no-repeat;
-	background-position: 0 0px;
+.icon
+{
+    width: 24px;
+    height: 24px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
-.icon-button-item {
-	display: inline-block;
-	margin: 2px;
-	padding: 1px 0px;
-	width: 34px;
-	height: 34px;
-	border-width: 0px;
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-position: center center;
+.icon-button-item
+{
+    display: inline-block;
+
+    width: 34px;
+    height: 34px;
+    margin: 2px;
+    padding: 1px 0;
+
+    border-width: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-.icon-button-item:active:hover:not([disabled]) > .icon {
-	background-position: 0 -24px;
+.icon-button-item:active:hover:not([disabled]) > .icon
+{
+    background-position: 0 -24px;
 }
-.icon-button-item.disabled {
-	opacity: 0.4;
+.icon-button-item.disabled
+{
+    opacity: .4;
 }
-.icon-button {
-	position: relative;
-	border-width: 0px;
-	margin: 0px;
-	padding: 0px;
-	height: 40px;
-	width: 40px;
-	background-color: transparent;
+.icon-button
+{
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+
+    border-width: 0;
+    background-color: transparent;
 }
-.icon-button > .button-bar {
-	background-color: transparent;
-	-webkit-transition: background-color 0.2s linear;
-	-moz-transition: background-color 0.2s linear;
-	-o-transition: background-color 0.2s linear;
-	-ms-transition: background-color 0.2s linear;
-	transition: background-color 0.2s linear;
+.icon-button > .button-bar
+{
+    -webkit-transition: background-color .2s linear;
+       -moz-transition: background-color .2s linear;
+        -ms-transition: background-color .2s linear;
+         -o-transition: background-color .2s linear;
+            transition: background-color .2s linear;
+
+    background-color: transparent;
 }
-.icon-button:active:hover:not([disabled]) > .button-bar {
-	background-color: #69cdff;
+.icon-button:active:hover:not([disabled]) > .button-bar
+{
+    background-color: #69cdff;
 }
-.icon-button.active > .button-bar {
-	background-color: #69cdff;
+.icon-button.active > .button-bar
+{
+    background-color: #69cdff;
 }
-.icon-button.disabled {
-	opacity: 0.4;
+.icon-button.disabled
+{
+    opacity: .4;
 }
-.icon-button-bar {
-  top: 38px;
+.icon-button-bar
+{
+    top: 38px;
 }

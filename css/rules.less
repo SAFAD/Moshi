@@ -3,87 +3,105 @@
    a maximum of 31 style sheets to be loaded before silently failing */
 
 /* Import font styles */
-@import "fonts.less";
+@import 'fonts.less';
 
 /* Prevent browser's default focus treatment (at least in Chrome) */
-:focus {
-  outline: none;
+:focus
+{
+    outline: none;
 }
 
-body {
-  color: @text-color;
-  font-family: @font-family;
-  font-size: @font-size;
-  cursor: default;
-  background-color: @background;
-  box-shadow: inset 0 0 169px rgba(0,0,0,.3);
-  /* remove automatic tap highlight color */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+body
+{
+    font-family: @font-family;
+    font-size: @font-size;
+
+    cursor: default;
+
+    color: @text-color;
+    background-color: @background;
+    box-shadow: inset 0 0 169px rgba(0,0,0,.3);
+    /* remove automatic tap highlight color */
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* prevent IE from inheriting line-height for these elements */
-button, label, input {
-  line-height: normal;
+button,
+label,
+input
+{
+    line-height: normal;
 }
 
-a, a:hover{
-  text-decoration: none;
-  color: @action-color;
+a,
+a:hover
+{
+    text-decoration: none;
+
+    color: @action-color;
 }
 
-*::selection {
-  background-color: @selected-background;
+*::selection
+{
+    background-color: @selected-background;
 }
 
 /* style that removes transition effects from elements */
-.no-animate {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
+.no-animate
+{
+    -webkit-transition: none;
+       -moz-transition: none;
+         -o-transition: none;
+            transition: none;
 }
 
-.item {
-  font-family: "Mochi Med Oblique";
-  font-size: 14px;
-  color: #323232;
-  font-style: oblique;
+.item
+{
+    font-family: 'Mochi Med Oblique';
+    font-size: 14px;
+    font-style: oblique;
+
+    color: #323232;
 }
 
-.toolbar-inline > * {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 4px 6px 5px;
-  box-sizing: border-box;
+.toolbar-inline > *
+{
+    display: inline-block;
+
+    box-sizing: border-box;
+    margin: 4px 6px 5px;
+
+    vertical-align: middle;
 }
 
 /* LESS pre-calculations */
 @disabled-opacity-ie: @disabled-opacity*100;
 
 /* Individual Widget CSS */
-@import "Badge.less";
-@import "Button.less";
-@import "ButtonColors.less";
-@import "ButtonDecorator.less";
-@import "IconButton.less";
-@import "ViewSelector.less";
-@import "RadioButton.less";
-@import "Checkbox.less";
-@import "Input.less";
-@import "RichText.less";
-@import "ProgressBar.less";
-@import "ProgressText.less";
-@import "Slider.less";
-@import "Spinner.less";
-@import "TextArea.less";
-@import "ToggleButton.less";
-@import "Header.less";
-@import "Subheader.less";
-@import "Collapsable.less";
-@import "ContextualPopup.less";
-@import "ContextualPopupDecorator.less";
-@import "List.less";
-@import "ListHeader.less";
-@import "ListItem.less";
-@import "Panels.less";
-@import "GridList.less";
+@import 'Badge.less';
+@import 'Button.less';
+@import 'ButtonColors.less';
+@import 'ButtonDecorator.less';
+@import 'IconButton.less';
+@import 'ViewSelector.less';
+@import 'RadioButton.less';
+@import 'Checkbox.less';
+@import 'Input.less';
+@import 'RichText.less';
+@import 'ProgressBar.less';
+@import 'ProgressText.less';
+@import 'Slider.less';
+@import 'Spinner.less';
+@import 'TextArea.less';
+@import 'ToggleButton.less';
+@import 'Header.less';
+@import 'Subheader.less';
+@import 'Collapsable.less';
+@import 'ContextualPopup.less';
+@import 'ContextualPopupDecorator.less';
+@import 'List.less';
+@import 'ListHeader.less';
+@import 'ListItem.less';
+@import 'Panels.less';
+@import 'GridList.less';

@@ -1,42 +1,54 @@
 /* TextArea.css */
 /* TODO: needs more proper styling to be honest...*/
-textarea {
-	margin: 10px 0px 6px;
-	padding: 0;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	background-color: transparent;
-	box-shadow: none;
-	/* Remove scrollbars and resize handle */
-	resize: none;
-	overflow: auto;
-	/* FIXME: hack for styling reset on Android */
-	/* -webkit-appearance: caret;*/
-	font-size: 14px;
-	font-family: "Mochi Medium";
-	color: #4b4b4b;
-	font-style: italic;
-	/* need >=50px for scrollbar to be usable on mac */
-	min-height: 50px;
+textarea
+{
+    font-family: 'Mochi Medium';
+    /* FIXME: hack for styling reset on Android */
+    /* -webkit-appearance: caret;*/
+    font-size: 14px;
+    font-style: italic;
+
+    overflow: auto;
+    /* need >=50px for scrollbar to be usable on mac */
+
+    min-height: 50px;
+    margin: 10px 0 6px;
+    padding: 0;
+    /* Remove scrollbars and resize handle */
+
+    resize: none;
+    cursor: pointer;
+
+    color: #4b4b4b;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
 }
-textarea:focus {
-	cursor: text;
+textarea:focus
+{
+    cursor: text;
 }
-textarea:disabled {
-	cursor: default;
+textarea:disabled
+{
+    cursor: default;
 }
-textarea::-webkit-scrollbar {
-	width: 4px;
+textarea::-webkit-scrollbar
+{
+    width: 4px;
 }
-textarea::-webkit-scrollbar-track-piece {
-	margin-top: 4px;
-	margin-bottom: 0px;
-	background-color: #fff;
-	-webkit-border-radius: 10px;
+textarea::-webkit-scrollbar-track-piece
+{
+    margin-top: 4px;
+    margin-bottom: 0;
+
+    -webkit-border-radius: 10px;
+    background-color: #fff;
 }
-textarea::-webkit-scrollbar-thumb:vertical {
-	height: 10px;
-	background-color: #7d7d7d;
-	-webkit-border-radius: 10px;
+textarea::-webkit-scrollbar-thumb:vertical
+{
+    height: 10px;
+
+    -webkit-border-radius: 10px;
+    background-color: #7d7d7d;
 }

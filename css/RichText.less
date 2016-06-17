@@ -1,26 +1,33 @@
 /* RichText.css */
-.input-decorator > .richtext {
-	margin: 0px;
-	padding: 0px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	background-color: transparent;
-	box-shadow: none;
-	/* FIXME: hack for styling reset on Android */
-	/* -webkit-appearance: caret;*/
-	font-size: 14px;
-	font-family: "Mochi Medium";
-	color: #4b4b4b;
-	font-style: italic;
+.input-decorator > .richtext
+{
+    font-family: 'Mochi Medium';
+    /* FIXME: hack for styling reset on Android */
+    /* -webkit-appearance: caret;*/
+    font-size: 14px;
+    font-style: italic;
+
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+    color: #4b4b4b;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
 }
-.input-decorator.focused > .richtext {
-	cursor: text;
+.input-decorator.focused > .richtext
+{
+    cursor: text;
 }
-.input-decorator.disabled > .richtext {
-	cursor: default;
+.input-decorator.disabled > .richtext
+{
+    cursor: default;
 }
 /* Pasting rich text adds <p> tag with a margin-top value of 16px */
-.richtext > p {
-	margin-top: 0px;
+.richtext > p
+{
+    margin-top: 0;
 }

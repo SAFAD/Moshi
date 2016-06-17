@@ -1,220 +1,299 @@
-.contextual-popup-title {
-  font-weight: bold;
-  padding: 24px 32px 0px;
+.contextual-popup-title
+{
+    font-weight: bold;
+
+    padding: 24px 32px 0;
 }
-.contextual-popup-scroller {
-  padding: 24px 32px;
+.contextual-popup-scroller
+{
+    padding: 24px 32px;
 }
-.contextual-popup-action-buttons {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
+.contextual-popup-action-buttons
+{
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
 }
 .contextual-popup,
-.mochi.contextual-popup {
-  font-size: 14px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.44);
-  border: 2px solid #646464;
-  border-radius: 24px;
-  padding: 6px;
-  color: #4b4b4b;
-  background-color: #ffffff;
-  min-width: 150px;
-  margin-top: 2px;
+.mochi.contextual-popup
+{
+    font-size: 14px;
+
+    min-width: 150px;
+    margin-top: 2px;
+    padding: 6px;
+
+    color: #4b4b4b;
+    border: 2px solid #646464;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .44);
 }
 /*setup the nub*/
-.contextual-popup::after {
-  content: '';
-  position: absolute;
+.contextual-popup::after
+{
+    position: absolute;
+
+    content: '';
 }
 /*for popups above activator*/
-.contextual-popup.vertical.above {
-  top: auto;
-  margin-top: -10px;
-  bottom: 100%;
-  margin-bottom: 10px;
+.contextual-popup.vertical.above
+{
+    top: auto;
+    bottom: 100%;
+
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 /*for popups below activator*/
-.contextual-popup.vertical.below {
-  margin-top: 20px;
+.contextual-popup.vertical.below
+{
+    margin-top: 20px;
 }
 /*for popups on the left of the activator*/
-.contextual-popup.right.horizontal {
-  margin-left: -11px;
+.contextual-popup.right.horizontal
+{
+    margin-left: -11px;
 }
 /*for popups on the right of the activator*/
-.contextual-popup.left.horizontal {
-  margin-left: 10px;
+.contextual-popup.left.horizontal
+{
+    margin-left: 10px;
 }
 /****nub positioning for vertical popups****/
 /*horizontally centered nub*/
-.contextual-popup.vertical::after {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 34%;
-  width: 71px;
-  height: 20px;
-  background: transparent url(./../images/contextual-popup-nubs/up.png) no-repeat;
+.contextual-popup.vertical::after
+{
+    position: absolute;
+    top: -20px;
+    left: 34%;
+
+    width: 71px;
+    height: 20px;
+
+    content: '';
+
+    background: transparent url(./../images/contextual-popup-nubs/up.png) no-repeat;
 }
 /*nub near horizontal left*/
-.contextual-popup.vertical.right::after {
-  left: 0%;
-  margin-left: 20px;
+.contextual-popup.vertical.right::after
+{
+    left: 0%;
+
+    margin-left: 20px;
 }
 /*nub near horizontal right*/
-.contextual-popup.vertical.left::after {
-  left: 100%;
-  margin-left: -90px;
+.contextual-popup.vertical.left::after
+{
+    left: 100%;
+
+    margin-left: -90px;
 }
 /*downward facing nub*/
-.contextual-popup.vertical.above::after {
-  top: 100%;
-  width: 71px;
-  height: 20px;
-  background: transparent url(./../images/contextual-popup-nubs/down.png) no-repeat;
+.contextual-popup.vertical.above::after
+{
+    top: 100%;
+
+    width: 71px;
+    height: 20px;
+
+    background: transparent url(./../images/contextual-popup-nubs/down.png) no-repeat;
 }
-.contextual-popup.vertical.below.right::after {
-  top: 0%;
-  margin-top: -20px;
-  width: 71px;
-  height: 20px;
-  background: transparent url(./../images/contextual-popup-nubs/up.png) no-repeat;
+.contextual-popup.vertical.below.right::after
+{
+    top: 0%;
+
+    width: 71px;
+    height: 20px;
+    margin-top: -20px;
+
+    background: transparent url(./../images/contextual-popup-nubs/up.png) no-repeat;
 }
-.contextual-popup.vertical.below.left::after {
-  top: 0%;
-  margin-top: -20px;
-  width: 71px;
-  height: 20px;
-  background: transparent url(./../images/contextual-popup-nubs/up.png) no-repeat;
+.contextual-popup.vertical.below.left::after
+{
+    top: 0%;
+
+    width: 71px;
+    height: 20px;
+    margin-top: -20px;
+
+    background: transparent url(./../images/contextual-popup-nubs/up.png) no-repeat;
 }
 /****nub positioning for left/right popups****/
 /*vertically centered nub for popups on left of activator*/
-.contextual-popup.right::after {
-  left: 100%;
-  top: 35%;
-  width: 20px;
-  height: 71px;
-  background: transparent url(./../images/contextual-popup-nubs/right.png) no-repeat;
+.contextual-popup.right::after
+{
+    top: 35%;
+    left: 100%;
+
+    width: 20px;
+    height: 71px;
+
+    background: transparent url(./../images/contextual-popup-nubs/right.png) no-repeat;
 }
 /*nub near vertical top for popups on left of activator*/
-.contextual-popup.right.high::after {
-  top: 25px;
+.contextual-popup.right.high::after
+{
+    top: 25px;
 }
 /*nub near vertical bottom for popups on left of activator*/
-.contextual-popup.right.low::after {
-  top: 100%;
-  margin-top: -100px;
+.contextual-popup.right.low::after
+{
+    top: 100%;
+
+    margin-top: -100px;
 }
 /*vertically centered nub for popups on right of activator*/
-.contextual-popup.left::after {
-  left: 0%;
-  width: 20px;
-  height: 71px;
-  margin-left: -20px;
-  top: 35%;
-  background: transparent url(./../images/contextual-popup-nubs/left.png) no-repeat;
+.contextual-popup.left::after
+{
+    top: 35%;
+    left: 0%;
+
+    width: 20px;
+    height: 71px;
+    margin-left: -20px;
+
+    background: transparent url(./../images/contextual-popup-nubs/left.png) no-repeat;
 }
 /*nub near vertical top for popups on right of activator*/
-.contextual-popup.left.high::after {
-  top: 25px;
+.contextual-popup.left.high::after
+{
+    top: 25px;
 }
 /*nub near vertical bottom for popups on right of activator*/
-.contextual-popup.left.low::after {
-  top: 100%;
-  margin-top: -100px;
+.contextual-popup.left.low::after
+{
+    top: 100%;
+
+    margin-top: -100px;
 }
 /*********************corners********************/
 /*vertical top corners*/
 /*for popups on the left of the activator*/
-.contextual-popup.vertical.right.corner {
-  margin-left: 0px;
+.contextual-popup.vertical.right.corner
+{
+    margin-left: 0;
 }
 /*for popups on the right of the activator*/
-.contextual-popup.vertical.left.corner {
-  margin-left: 0px;
+.contextual-popup.vertical.left.corner
+{
+    margin-left: 0;
 }
-.contextual-popup.vertical.below.left.corner {
-  border-top-right-radius: 0px;
+.contextual-popup.vertical.below.left.corner
+{
+    border-top-right-radius: 0;
 }
-.contextual-popup.vertical.below.right.corner {
-  border-top-left-radius: 0px;
+.contextual-popup.vertical.below.right.corner
+{
+    border-top-left-radius: 0;
 }
-.contextual-popup.vertical.below.left.corner::after {
-  top: 0%;
-  left: 100%;
-  margin-top: -14px;
-  margin-left: -30px;
-  width: 71px;
-  height: 20px;
-  background: transparent url(./../images/contextual-popup-nubs/top-right-corner-up.png) no-repeat;
+.contextual-popup.vertical.below.left.corner::after
+{
+    top: 0%;
+    left: 100%;
+
+    width: 71px;
+    height: 20px;
+    margin-top: -14px;
+    margin-left: -30px;
+
+    background: transparent url(./../images/contextual-popup-nubs/top-right-corner-up.png) no-repeat;
 }
-.contextual-popup.vertical.below.right.corner::after {
-  top: 0%;
-  left: 0%;
-  width: 71px;
-  height: 20px;
-  margin-left: -2px;
-  margin-top: -14px;
-  background: transparent url(./../images/contextual-popup-nubs/top-left-corner-up.png) no-repeat;
+.contextual-popup.vertical.below.right.corner::after
+{
+    top: 0%;
+    left: 0%;
+
+    width: 71px;
+    height: 20px;
+    margin-top: -14px;
+    margin-left: -2px;
+
+    background: transparent url(./../images/contextual-popup-nubs/top-left-corner-up.png) no-repeat;
 }
 /*vertical bottom corners*/
-.contextual-popup.left.above.corner {
-  border-bottom-right-radius: 0px;
+.contextual-popup.left.above.corner
+{
+    border-bottom-right-radius: 0;
 }
-.contextual-popup.right.above.corner {
-  border-bottom-left-radius: 0px;
+.contextual-popup.right.above.corner
+{
+    border-bottom-left-radius: 0;
 }
-.contextual-popup.vertical.left.above.corner::after {
-  top: 100%;
-  margin-left: -30px;
-  width: 71px;
-  height: 20px;
-  background: transparent url(./../images/contextual-popup-nubs/bottom-right-corner-down.png) no-repeat;
+.contextual-popup.vertical.left.above.corner::after
+{
+    top: 100%;
+
+    width: 71px;
+    height: 20px;
+    margin-left: -30px;
+
+    background: transparent url(./../images/contextual-popup-nubs/bottom-right-corner-down.png) no-repeat;
 }
-.contextual-popup.vertical.right.above.corner::after {
-  top: 100%;
-  left: 0%;
-  margin-left: -2px;
-  background: transparent url(./../images/contextual-popup-nubs/bottom-left-corner-down.png) no-repeat;
+.contextual-popup.vertical.right.above.corner::after
+{
+    top: 100%;
+    left: 0%;
+
+    margin-left: -2px;
+
+    background: transparent url(./../images/contextual-popup-nubs/bottom-left-corner-down.png) no-repeat;
 }
 /*horizontal bottom corners*/
-.contextual-popup.left.low.corner {
-  border-bottom-left-radius: 0px;
+.contextual-popup.left.low.corner
+{
+    border-bottom-left-radius: 0;
 }
-.contextual-popup.right.low.corner {
-  border-bottom-right-radius: 0px;
+.contextual-popup.right.low.corner
+{
+    border-bottom-right-radius: 0;
 }
-.contextual-popup.left.low.corner::after {
-  top: 100%;
-  left: 0%;
-  margin-top: -30px;
-  margin-left: -14px;
-  background: transparent url(./../images/contextual-popup-nubs/bottom-left-corner-left.png) no-repeat;
+.contextual-popup.left.low.corner::after
+{
+    top: 100%;
+    left: 0%;
+
+    margin-top: -30px;
+    margin-left: -14px;
+
+    background: transparent url(./../images/contextual-popup-nubs/bottom-left-corner-left.png) no-repeat;
 }
-.contextual-popup.right.low.corner::after {
-  top: 100%;
-  left: 100%;
-  margin-top: -30px;
-  background: transparent url(./../images/contextual-popup-nubs/bottom-right-corner-right.png) no-repeat;
+.contextual-popup.right.low.corner::after
+{
+    top: 100%;
+    left: 100%;
+
+    margin-top: -30px;
+
+    background: transparent url(./../images/contextual-popup-nubs/bottom-right-corner-right.png) no-repeat;
 }
 /*horizontal top corners*/
-.contextual-popup.left.high.corner {
-  border-top-left-radius: 0px;
+.contextual-popup.left.high.corner
+{
+    border-top-left-radius: 0;
 }
-.contextual-popup.right.high.corner {
-  border-top-right-radius: 0px;
+.contextual-popup.right.high.corner
+{
+    border-top-right-radius: 0;
 }
-.contextual-popup.left.high.corner::after {
-  top: 0%;
-  left: 0%;
-  margin-top: -2px;
-  margin-left: -14px;
-  background: transparent url(./../images/contextual-popup-nubs/top-left-corner-left.png) no-repeat;
+.contextual-popup.left.high.corner::after
+{
+    top: 0%;
+    left: 0%;
+
+    margin-top: -2px;
+    margin-left: -14px;
+
+    background: transparent url(./../images/contextual-popup-nubs/top-left-corner-left.png) no-repeat;
 }
-.contextual-popup.right.high.corner::after {
-  top: 0%;
-  left: 100%;
-  margin-top: -2px;
-  background: transparent url(./../images/contextual-popup-nubs/top-right-corner-right.png) no-repeat;
+.contextual-popup.right.high.corner::after
+{
+    top: 0%;
+    left: 100%;
+
+    margin-top: -2px;
+
+    background: transparent url(./../images/contextual-popup-nubs/top-right-corner-right.png) no-repeat;
 }
