@@ -5,11 +5,14 @@
   "author": "Sadaoui Abderrahim",
   "repository": "https://github.com/SAFAD/Moshi",
   "license": "SEE LICENSE IN LICENSE",
-  "contributors": [ "Sadaoui Abderrahim <a.sadaoui@outlook.com> (https://github.com/SAFAD)" ],
+  "contributors": [
+    "Sadaoui Abderrahim <a.sadaoui@outlook.com> (https://github.com/SAFAD)"
+  ],
   "bugs": {
     "url": "https://github.com/SAFAD/Moshi/issues"
   },
   "devDependencies": {
+    "auto-changelog": "^0.3.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-csscomb": "^3.0.7",
@@ -17,5 +20,12 @@
     "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2"
   },
-  "keywords": ["css", "frontend", "framework"]
+  "keywords": [
+    "css",
+    "frontend",
+    "framework"
+  ],
+  "scripts": {
+    "version": "auto-changelog --package; git add CHANGELOG.md"
+  }
 }
