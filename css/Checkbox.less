@@ -1,30 +1,46 @@
 /* Checkbox.css */
+
 input[type='checkbox']
 {
-    display: inline-block;
+    display: none;
+    &:checked + label
+    {
+        span
+        {
+            border-color: #ffb80d;
+            background: url('../images/checkbox.png') no-repeat #ffb80d;
+        }
+    }
+    &:disabled + label
+    {
+        span
+        {
+            cursor: default;
 
-    width: 22px;
-    height: 22px;
-    margin: 0;
-
-    cursor: pointer;
-    -webkit-transition: background-color .1s linear;
-       -moz-transition: background-color .1s linear;
-         -o-transition: background-color .1s linear;
-            transition: background-color .1s linear;
-    vertical-align: middle;
-
-    border: 2px solid #646464;
-    border-radius: 13px;
+            opacity: @disabled-opacity;
+            border-color: #a2a2a2;
+            background: #ccc;
+        }
+    }
 }
-input[type='checkbox']:checked
+input[type='checkbox'] + label
 {
-    padding: 2px;
+    span
+    {
+        display: inline-block;
 
-    border-width: 0;
-    background: url(../images/checkbox.png) no-repeat;
-}
-input[type='checkbox']:disabled
-{
-    opacity: .4;
+        width: 24px;
+        height: 24px;
+        margin-left: 16px;
+
+        cursor: pointer;
+        -webkit-transition: background-color .2s linear;
+           -moz-transition: background-color .2s linear;
+             -o-transition: background-color .2s linear;
+                transition: background-color .2s linear;
+
+        border: solid 2px #646464;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 }
