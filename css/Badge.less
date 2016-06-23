@@ -23,15 +23,31 @@
     -webkit-border-radius: 20px; /* Safari, Chrome */
        -moz-border-radius: 20px; /* Firefox */
             border-radius: 20px; /* CSS3 */
-    /*FIXME: debug purposes only*/
-    background-color: #69cdff;
-}
-.badge.oval
-{
-    padding-right: 6px;
-    padding-left: 6px;
+    background-color: @color-primary;
 
-    -webkit-border-radius: 12px; /* Safari, Chrome */
-       -moz-border-radius: 12px; /* Firefox */
-            border-radius: 12px; /* CSS3 */
+    &.oval
+    {
+        padding-right: 6px;
+        padding-left: 6px;
+
+        -webkit-border-radius: 12px; /* Safari, Chrome */
+           -moz-border-radius: 12px; /* Firefox */
+                border-radius: 12px; /* CSS3 */
+    }
+    &.secondary
+    {
+        background: @color-secondary;
+    }
+    &.success
+    {
+        background: @color-success;
+    }
+    &.alert
+    {
+        background-color: @color-alert;
+    }
+    &.warning
+    {
+        background-color: @color-warning;
+    }
 }
